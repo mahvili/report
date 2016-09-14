@@ -9,7 +9,7 @@ In contrast, the advantage that can be achieved in this method is that while the
 Another advantage of this, as discussed earlier, can be possibility to start with a coarse grain solution and adaptively refine to areas needed. Probably later investigation of using lower resolution schemes for lower subtree problems can show better result for storage space and memory usage. \\
 Note that conventionally we are using the unit square domain. The reason is mathematically the division of this domain is more easy and straightforward but our implementation can work with any rectangular domain. 
 
-%figure rectangle and figure square
+%1figure rectangle and figure square together
 
 \section{Verification of components}
 In any case, as for any scientific approach we first need to verify that our implementation works as expected. This has been done by comparison of the solution to normal full grid problem. we present here different test cases to be sure that in all different cases we get proper results.
@@ -21,10 +21,10 @@ In any case, as for any scientific approach we first need to verify that our imp
 \end{enumerate}
 In each case we try to compare the error of combination technique given the default scheme of $\overrightarrow{l}=(4,4)$.\\
 In every case we will draw the figures of the difference to observe better how the error is spread in the domain. For special test case 1 since the bilinear interpolation is used we can see the combination technique gives the perfect solution. The reason obviously is the nature of problem. Since bilinear interpolation is performed in one direction first and later in other direction it can be observe that interpolation of a function which is not of terms $x^even \cdot y^even$ gives no error.
-%figure case 1 verification difference, combigrid, fullgrid
-%figure case 2 verification difference, combigrid, fullgrid
-%figure case 3 verification difference, combigrid, fullgrid
-%figure case 4 verification difference, combigrid, fullgrid
+%2figure case 1 verification difference, combigrid, fullgrid alll together
+%2figure case 2 verification difference, combigrid, fullgrid alll together
+%2figure case 3 verification difference, combigrid, fullgrid alll together
+%2figure case 4 verification difference, combigrid, fullgrid alll together
 
 % give the table of errors
 \begin{center}
@@ -47,17 +47,18 @@ In every case we will draw the figures of the difference to observe better how t
 Based on the the fact that the current method has been verified, we will check the two different case for local refinement, one simply to be ensured our implementation of recursive tree works fine and second for the test cases presented above. 
 \subsection{error indicator based on predefined error function}
 As explained earlier the idea here to come up with some way as a test case for local refinement. Based on author's background in mesh generation, there is a technique specially for unstructured grid genreration with background predefined function \cite{Henshaw1996} and adaptive grid generation algorithm\cite{Ebeida2010}. Motivated by ideas presented we will enforce a predefined error to the problem by defining an error function which is higher than our threshold for certain regions. This way we can predict exactly how the local refinement should work. For better clarity we present the solution tree structure and the predefined function with it's image on the unit square problem.\\
-% figure of tree from aastha
-% figure of predefined error from aastha
-% figure predefined error from VTK
+% 3figure of tree from aastha
+% 3figure of predefined error from aastha
+% 3figure predefined refinement from VTK
+% 3figure predefined error from VTK
 
 As we can see above the solution to this case match our expectation so based on that we perform our final result.
 \subsection{error indicator based on solution of combination technique}
 Now that the code has been verified in both adaptive and non-adaptive cases, further investigation into the actual problem at hand will be focused on, which is performing the adaptation in correspondent with the local error of solution in each node or subtree. For that, an error indicator has been introduced which compares the solution to the full grid method. Actually, the primary reason we defined some extra test cases in the verification part was that we can see how the local refinement will work with different cases, otherwise there is much similarity between case 2, 3 and 4. \\
 
-%adaptive case 2: before refinement and after refinement
-%adaptive case 3: before refinement and after refinement
-%adaptive case 4: before refinement and after refinement
+%4adaptive case 2: before refinement and after refinement together 
+%4adaptive case 3: before refinement and after refinement together
+%4adaptive case 4: before refinement and after refinement together
 
 Another important note is that we always need to visualized the error in the solution because from the image of the solution with human eye is hardly possible to distinguish the differences.
 
@@ -69,6 +70,6 @@ In the last section the error is visualized in unit square simply because it doe
 \end{enumerate}
 The reason for these two scheme is that the results should be separated and based on the factor at play.
 
-%figure error threshold independent
-%figure refinement level constant
+%5figure error threshold independent
+%5figure refinement level constant
 

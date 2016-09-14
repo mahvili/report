@@ -1,0 +1,247 @@
+\begin{thebibliography}{10}
+
+\bibitem{smolyak63quadrature}
+S~Smolyak.
+\newblock {Quadrature and Interpolation Formulas for Tensor Products of Certain
+  Classes of Functions}.
+\newblock {\em Soviet Mathematics, Doklady}, 4:240--243, 1963.
+
+\bibitem{Yserentant1986}
+Harry Yserentant.
+\newblock {On the multi-level splitting of finite element spaces}.
+\newblock {\em Numerische Mathematik}, 49(4):379--412, jul 1986.
+
+\bibitem{Zenger1990}
+C.~Zenger.
+\newblock {Sparse grids}.
+\newblock {\em Notes on Numerical Fluid Mechanics - Parallel Algorithms for
+  Partial Differential Equations (W. Hackbusch, ed.)}, 31, 1990.
+
+\bibitem{Griebel1992}
+M~Griebel, W~Huber, U.~R{\"{u}}de, and T.~St{\"{o}}rtkuhl.
+\newblock {The combination technique for parallel sparse-grid-preconditioning
+  or -solution of PDE's on workstation networks}.
+\newblock In Luc Boug{\'{e}}, Michel Cosnard, Yves Robert, and Denis Trystram,
+  editors, {\em Parallel Processing: CONPAR 92—VAPP V}, pages 217--228.
+  Springer Berlin Heidelberg, 1992.
+
+\bibitem{Griebel1992a}
+Michael Griebel.
+\newblock {The Combination Technique for the Sparse Grid Solution of PDE's on
+  Multiprocessor Machines}.
+\newblock {\em Parallel Processing Letters}, 02(01):61--70, mar 1992.
+
+\bibitem{Griebel1992b}
+Michael Griebel, Michael Schneider, and Christoph Zenger.
+\newblock {A combination technique for the solution of sparse grid problems}.
+\newblock {\em Iterative methods in Linear Algebra}, pages 263--281, 1992.
+
+\bibitem{Rude92extrapolationand}
+U~R{\"{u}}de.
+\newblock {Extrapolation and Related Techniques for Solving Elliptic
+  Equations}.
+\newblock In {\em BERICHT I-9135, INSTITUT FUR INFORMATIK, TU MUNCHEN}, 1992.
+
+\bibitem{Griebel:1993*3}
+M.~Griebel.
+\newblock Sparse grid multilevel methods, their parallelization and their
+  application to {CFD}.
+\newblock In J.~H\"aser, editor, {\em Parallel Computational Fluid Dynamics
+  92}, pages 161--174. Elsevier, New Brunswick, 1993.
+
+\bibitem{Pflaum1993}
+Christoph Pflaum.
+\newblock {Convergence of the Combination Technique for the Finite Element
+  Solution of Poisson's Equation}.
+\newblock {\em Institut fur Informatik: Technische Universitat Munchen}, pages
+  1--35, 1993.
+
+\bibitem{Bungartz1994}
+H.-J. Bungartz, M.~Griebel, D.~R{\"{o}}schke, and C.~Zenger.
+\newblock {POINTWISE CONVERGENCE OF THE COMBINATION TECHNIQUE FOR LAPLACE ' S
+  EQUATION}.
+\newblock {\em East-West J. Numer. Math}, 2:21--45, 1994.
+
+\bibitem{Rude1994}
+U.~R{\"{u}}de.
+\newblock {Multilevel, Extrapolation, and Sparse Grid Methods}.
+\newblock In {\em Multigrid Methods IV}, number~1, pages 281--294.
+  Birkh{\"{a}}user Basel, Basel, 1994.
+
+\bibitem{Griebel1995}
+Michael Griebel and Veronika Thurner.
+\newblock {The efficient solution of fluid dynamics problems by the combination
+  technique}.
+\newblock {\em International Journal of Numerical Methods for Heat {\&} Fluid
+  Flow}, 5(3):251--269, mar 1995.
+
+\bibitem{Pflaum1997}
+Christoph Pflaum.
+\newblock {Convergence of the Combination Technique for Second-Order Elliptic
+  Differential Equations}.
+\newblock {\em SIAM Journal on Numerical Analysis}, 34(6):2431--2455, 1997.
+
+\bibitem{Bungartz1998}
+Hans-Joachim Bungartz and Thomas Dornseifer.
+\newblock {Sparse Grids: Recent Developments for Elliptic Partial Differential
+  Equations}.
+\newblock In {\em Multigrid Methods V (Lecture Notes in Computational Science
+  and Engineering Volume 3)}, pages 45--70. Springer Berlin Heidelberg, 1998.
+
+\bibitem{Gerstner1998}
+Thomas Gerstner and Michael Griebel.
+\newblock {Numerical integration using sparse grids Thomas}.
+\newblock {\em Numerical Algorithms}, 18(3/4):209--232, 1998.
+
+\bibitem{Griebel1998}
+Michael Griebel.
+\newblock {Adaptive sparse grid multilevel methods for elliptic PDEs based on
+  finite differences}.
+\newblock {\em Computing}, 61(2):151--179, jun 1998.
+
+\bibitem{Griebel1999}
+Michael Griebel and Gerhard Zumbusch.
+\newblock {Adaptive Sparse Grids for Hyperbolic Conservation Laws}.
+\newblock In {\em Hyperbolic Problems: Theory, Numerics, Applications}, pages
+  411--422. Birkh{\"{a}}user Basel, Basel, 1999.
+
+\bibitem{Pflaum1999}
+C~Pflaum and A~Zhou.
+\newblock {Error analysis of the combination technique}.
+\newblock {\em Numerische Mathematik}, 84(2):327--350, dec 1999.
+
+\bibitem{Lastdrager2000}
+Boris Lastdrager, Barry Koren, and Jan Verwer.
+\newblock {The Sparse-Grid Combination Technique Applied to Time-Dependent
+  Advection Problems}.
+\newblock In {\em Multigrid Methods VI}, volume~14, pages 143--149. sep 2000.
+
+\bibitem{Zumbusch2000}
+Gerhard Zumbusch.
+\newblock {Parallel Adaptively Refined Sparse Grids}.
+\newblock In {\em Multigrid Methods VI}, pages 285--292. Springer Berlin
+  Heidelberg, 2000.
+
+\bibitem{Lastdrager2001}
+Boris Lastdrager, Barry Koren, and Jan Verwer.
+\newblock {The sparse-grid combination technique applied to time-dependent
+  advection problems}.
+\newblock {\em Applied Numerical Mathematics}, 38(4):377--401, sep 2001.
+
+\bibitem{Hegland2002}
+Markus Hegland.
+\newblock {Additive Sparse Grid Fitting}.
+\newblock In {\em In: Proceedings of the Fifth International Conference on
+  Curves and Surfaces, Saint-Malo}, number February, pages 209--218, 2002.
+
+\bibitem{Hegland2003}
+M~Hegland.
+\newblock {Adaptive sparse grids}.
+\newblock {\em ANZIAM Journal}, 44(April):C335--C353, apr 2003.
+
+\bibitem{Garcke2006}
+Jochen Garcke.
+\newblock {Regression with the optimised combination technique}.
+\newblock In {\em Proceedings of the 23rd international conference on Machine
+  learning - ICML '06}, pages 321--328, New York, New York, USA, 2006. ACM
+  Press.
+
+\bibitem{Garcke2006a}
+Jochen Garcke.
+\newblock {Sparse Grid Tutorial Jochen}.
+\newblock Technical report, Canberra, 2006.
+
+\bibitem{Garcke2007a}
+Jochen Garcke.
+\newblock {A dimension adaptive sparse grid combination technique for machine
+  learning}.
+\newblock In Wayne Read, Jay~W. Larson, and A.~J. Roberts, editors, {\em
+  Proceedings of the 13th Biennial Computational Techniques and Applications
+  Conference, CTAC-2006}, volume~48, pages C725----C740. 2007.
+
+\bibitem{Garcke2007}
+Jochen Garcke.
+\newblock {An optimised sparse grid combination technique for eigenproblems}.
+\newblock {\em PAMM}, 7(1):1022301--1022302, dec 2007.
+
+\bibitem{Hegland2007}
+Markus Hegland, Jochen Garcke, and Vivien Challis.
+\newblock {The combination technique and some generalisations}.
+\newblock {\em Linear Algebra and its Applications}, 420(2-3):249--275, jan
+  2007.
+
+\bibitem{Franz2009}
+Sebastian Franz, Fang Liu, Hans-g{\"{o}}rg Roos, Martin Stynes, and Aihui Zhou.
+\newblock {The combination technique for a two-dimensional convection-diffusion
+  problem with exponential layers}.
+\newblock {\em Applications of Mathematics}, 54(3):203--223, jun 2009.
+
+\bibitem{Gaikwad2009}
+Abhijeet Gaikwad and Ioane~Muni Toke.
+\newblock {GPU based sparse grid technique for solving multidimensional options
+  pricing PDEs}.
+\newblock In {\em Proceedings of the 2nd Workshop on High Performance
+  Computational Finance - WHPCF '09}, pages 1--9, New York, New York, USA,
+  2009. ACM Press.
+
+\bibitem{Garcke2009}
+Jochen Garcke and Markus Hegland.
+\newblock {Fitting multidimensional data using gradient penalties and the
+  sparse grid combination technique}.
+\newblock {\em Computing}, 84(1-2):1--25, apr 2009.
+
+\bibitem{Garcke2013}
+Jochen Garcke.
+\newblock {Sparse Grids in a Nutshell}.
+\newblock In Jochen Garcke and Michael Griebel, editors, {\em Sparse Grids and
+  Applications}, volume~88 of {\em Lecture Notes in Computational Science and
+  Engineering}, pages 57--80. Springer Berlin Heidelberg, Berlin, Heidelberg,
+  2013.
+
+\bibitem{Hupp2013}
+Philipp Hupp.
+\newblock {Hierarchization for the Sparse Grid Combination Technique}.
+\newblock {\em CoRR Computing Research Repository}, aug 2013.
+
+\bibitem{Kowitz2013}
+Christoph Kowitz and Markus Hegland.
+\newblock {The Sparse Grid Combination Technique for Computing Eigenvalues in
+  Linear Gyrokinetics}.
+\newblock {\em Procedia Computer Science}, 18:449--458, 2013.
+
+\bibitem{Larson2013}
+J.W. Larson, M~Hegland, B~Harding, S~Roberts, L~Stals, A.P. Rendell,
+  P.~Strazdins, M.M. Ali, C.~Kowitz, R.~Nobes, J.~Southern, N.~Wilson, M.~Li,
+  and Y.~Oishi.
+\newblock {Fault-Tolerant Grid-Based Solvers: Combining Concepts from Sparse
+  Grids and MapReduce}.
+\newblock {\em Procedia Computer Science}, 18:130--139, 2013.
+
+\bibitem{Reisinger2013}
+Christoph Reisinger.
+\newblock {Analysis of linear difference schemes in the sparse grid combination
+  technique}.
+\newblock {\em IMA Journal of Numerical Analysis}, 33(2):544--581, apr 2013.
+
+\bibitem{Heene2014}
+Mario Heene, Christoph Kowitz, and Dirk Pfl{\"{u}}ger.
+\newblock {Load Balancing for Massively Parallel Computations with the Sparse
+  Grid Combination Technique}.
+\newblock In {\em Advances in Parallel Computing (Volume 25: Parallel
+  Computing: Accelerating Computational Science and Engineering (CSE)}, pages
+  574 -- 583. 2014.
+
+\bibitem{Erhel2015}
+J~Erhel, Z~Mghazli, and M~Oumouni.
+\newblock {An adaptive sparse grid method for elliptic PDEs with stochastic
+  coefficients}.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering},
+  297:392--407, dec 2015.
+
+\bibitem{Bohn2016}
+Bastian Bohn, Jochen Garcke, and Michael Griebel.
+\newblock {A sparse grid based method for generative dimensionality reduction
+  of high-dimensional data}.
+\newblock {\em Journal of Computational Physics}, 309:1--17, 2016.
+
+\end{thebibliography}

@@ -1,0 +1,25 @@
+\chapter{Current Implementation}
+\label{chapter:myImplementation}
+
+1. for non smooth solutions and more complex problems theory is still missing. Here like for the standard grid adaptive refinement seems to be necessary to get around solution method. First attempts in this direction are promising\cite{Griebel1992b} \\
+
+2. Consequently, one of the main advantages of the combination technique stems from the properties of sparse grids [1] In comparison to the standard full grid approach the number of grid points can be reduced significantly. Another advantage has to be seen in the simplicity of the combination concept its inherent parallel structure and its framework property allowing the integration of existing solvers for partial differential equations.\cite{Bungartz1994}\\ % write however the idea is in some way different in current implementation
+
+3. we have implicitly assumed that this is the coarse mesh with spacing h that is naturally embedded in the fine mesh, so that the fine mesh solution may be transferred to the coarse mesh with injection.
+
+4. In elliptic problems the smoothness of the solution may be disturbed where the data is non-smooth. The form of the domain or the need for local refinement may make the use of uniform meshes difficult.  The local smoothness of the solution is a basic characteristic of many elliptic problems, so that extrapolation can be used locally, even when the global solution is non-smooth. With this background, several interesting new extrapolation-based approaches have been developed within the past few years, including the sparse grid combination technique and multivariate extrapolation. In this paper we will focus on explicit extrapolation methods that are based on the (linear) combination of solutions on different grids. Implicit extrapolation methods, in contrast, obtain higher order by applying the extrapolation idea on quantities like the truncation error or the numerical approximation of the functional. Such methods are discussed in Rude\cite{Rude1994, Rude92extrapolationand} \\
+
+5. Using bilinear interpolation for each single component function, we can extend the the domain of definition to the union of all participating grids. This is possible, because bilinear interpolation can be shown to be compatible with the error splitting.\cite{Rude1994} \\
+
+6. Obviously, an algorithm is needed which combines the advantages of both methods: low storage requirements, a low number of operations involved, but still simple data structures. In the following, we present an algorithm that fulfills these requirements\cite{Griebel1995} \\
+
+7. Firstly, the block structure of a grid reduces main memory requirements. In an inner iteration step, the problem is solved one block at a time. An outer iteration establishes the overall solution. Secondly, the block structure of a grid is a natural basis for the parallelization of the solver. Each processor solves the problem on one of the blocks, and communication is necessary merely along block interfaces, in order to achieve a smooth solution on the whole domain.\cite{Griebel1995} \\
+
+8. The hierarchical coefficient or hierarchical surplus itself can be used to indicate the smoothness of u at the corresponding grid point and, consequently, the necessity to refine the grid here.\cite{Bungartz1998}\\
+ 
+ \section{General Ideas}
+ 
+ \section{Different Schemes}
+ 
+
+

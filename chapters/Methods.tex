@@ -1,0 +1,130 @@
+\chapter{Methods}
+\label{chapter:methods}
+
+1. The basic idea of combniaton technique is same as for multilevel splitting of finite element spaces is to replace the usual nodal bases of the finite element spaces by hierarchical bases.\cite{Yserentant1986} \\
+1. This new algorithmic concept is based on the independent solution of many problems with reduced size and their linear combination. \cite{Griebel1992}\\
+
+\section{sparse grid method and hierarchical basis}
+
+5. At first sight one gets rather dense and complicated discretization matrices when using hierarchical bases but The trick is not to assemble the discretization matrix but to use a factorization of it into the usual nodal basis stiffness matrix and some other very simple and sparse matrices.\cite{Yserentant1986} \\
+
+3. Using this type of hierarchical basis the calculation with functions defined on different grids and spaces is simplified. For example, the addition of two functions defined on different grids is reduced to the addition of the single coefficients. This is due to the fact that now the basis functions that are associated with the grid points which belong to both grids are just the same. \cite{Griebel1992b} \\
+
+4. The transformation of the coefficients of a function on grid represented in standard nodal basis to its representation in hierarchical basis can be implemented by a constant number of operations per grid point. The transformation to the hierarchical basis representation is done by the algorithm in \cite{Griebel1992b}. This gives further insight to our hierarchical basis.\\
+
+5. Following the argumentation in \cite{Zenger1990} we use as our finite element space the direct sum of the subspaces where the contribution to the error is equal or larger than some prescribed tolerance and results in an approximation space that corresponds to a sparse grid instead of a full grid. Now we will give a different motivation of the sparse grid approach. To this end we seek a certain linear combination of full grid spaces so that the sparse grid space is created. This gives the idea to represent any sparse grid function as a linear combination of its interpolants on the regular full grids. This approach has the advantage that only regular data structures must be used. There is no need for more complicated data structures than a few arrays to store a sparse grid function.\cite{Griebel1992b} \\
+
+6. Efficient discretization techniques are of crucial importance for most types of problems in numerical mathematics, starting from tasks like how to define sets of points to approximate, interpolate, or integrate certain classes of functions as good as possible, up to the numerical solution of differential equations. Introduced by Zenger in 1990 and based on hierarchical tensor product approximation spaces, sparse grids have turned out to be a very efficient approach in order to improve the ratio of invested storage and computing time to the achieved accuracy for many problems in the areas mentioned above.\cite{Bungartz1998}\\
+
+\section{Combination Technique}
+1. Altogether combination technique involves $O({h}^{-1}_nlog({h}^{-1}_n))$  unknowns in contrast to $O({h}^{-2}_n) $ unknowns for the conventional full grid approach. Additionally, combination solution is nearly as accurate as the standard solution. it can be proven that error is only slightly worse than for the associated full grid.\cite{Griebel1992a, Griebel1992b}\\
+
+2. to some extent the combination technique even works in the case of non-smooth solutions. Now, ${h}^2_i$ and ${h}^2_j$ in have to be replaced by ${h}^\alpha_i$ , ${h}^\beta_j$ with appropriate $\alpha$ and $\beta$, but because of the properties of the combination technique the leading error terms still cancel. However, for the problems with severe singularities, the appropriate combination of adaptively refined grids is recommended.\cite{Griebel1992a}\\
+
+3. We have seen that in many situations the combination technique leads to the cancellation of certain error terms in the asymptotic error expansion\cite{Griebel1992b} \\
+
+4. Using bilinear interpolation for each single component function, we can extend the the domain of definition to the union of all participating grids. This is possible, because bilinear interpolation can be shown to be compatible with the error splitting.\cite{Rude1994} \\
+
+
+
+\section{Tree and in special Quadtrees}
+
+
+
+\textbf{20.}
+(
+1. The sparse grid method is a special discretization technique, which allows to cope with the curse of dimensionality of grid based approaches to some extent. It is based on a hierarchical basis, a representation of a discrete function space which is equivalent to the conventional nodal basis, and a sparse tensor product construction. 
+The method was originally developed for the solution of partial differential equations [Zen91, Gri91, Bun92, Bal94, Ach03]. it can be used in all finite element approaches, finite differences and finite volume approaches.
+Besides working directly in the hierarchical basis a sparse grid representation of a function can also be computed using the combination technique [GSZ92], where a certain sequence of partial functions is linearly combined.\cite{Garcke2006a}\\
+
+2. For the representation of a function f defined over a d-dimensional domain the sparse grid approach employs O(h1 log(1)1) grid points in the discretization process, where hn n denotes the mesh size. It can be shown
+that the order of approximation to describe a function f, under certain smoothness conditions, is O(h2log(h1)d1). This is in contrast to conventional grid methods, which need O(hd) for an accuracy of O(h2 ). Since the curse of dimensionality of full grid method arises for sparse grids at this much smaller extent they can be used for higher dimensional problems.\cite{Garcke2006a}\\
+
+ 3. Sparse grid: 
+Motivated by the relation (13) of the Iimportance of the hierarchical components Zenger [Zen91] and Griebel [Gri91] introduce the so-called sparse grids, where hierarchical basis functions with a small support, and therefore a small part in the function representation, are not included in the discrete space of level n anymore.\cite{Garcke2006a}\\
+
+4. Sparse grid combination technique : The so-called combination technique [GSZ92], which is based on multi-variate extrapolation [BGR94], is another method to achieve a function representation on a sparse grid. The function is discretized on a certain sequence of grids using a nodal discretization.A linear combination of these partial functions then gives the sparse grid representation. This approach can have numerical advantages over working directly in the hierarchical basis, where e.g. the stiffness matrix is not sparse and the on-the-fly computation of the matrix-vector-product, which complexity scales better, is challenging in the implementation [Ach03, Bal94, Bun98].\cite{Garcke2006a}\\
+
+5. Note that in the original [GSZ92] and other papers as well, a slightly different definition was used, again due to Dirichlet boundary conditions, \cite{Garcke2006a}\\
+
+6. The resulting function fnc lives in the sparse grid space Vns, the combined interpolant is identically with the hierarchical sparse grid interpolant.\cite{Garcke2006a}\\
+
+7. Note that the solution obtained with the combination technique fnc for the numerical treatment of partial differential equations is in general not the sparse grid solution fns. However, the approximation property is of the same order as long a series expansion of the error\cite{Garcke2006a}\\
+
+8. Sparse grids in python: We give the listing of some python code for a sparse grid without functions on the boundary, i.e. according to formula (16).\cite{Garcke2006a}\\
+)\\
+
+\textbf{27.}
+(
+1. The approach is obtained from a multi-scale basis by a tensor product construction and subsequent truncation of the resulting multi-resolution series expansion\cite{Garcke2013}\\
+
+2. Combination technique is another method to achieve a function representation on a sparse grid. The function is discretized on a certain sequence of grids using a nodal discretization.\cite{Garcke2013}\\
+
+3. sparse grid representation of a function can also be computed using the combination technique [25], here a certain sequence of partial functions represented in the conventional nodal basis is linearly combined.\cite{Garcke2013}\\
+
+4. The number of basis functions which describe a function in nodal or hierarchical basis is $(2^n+1)^d$ .\cite{Garcke2013}\\
+
+5. Note that a practical realization of sparse grids involves suitable data structures and special algorithms, e.g. for efficient matrix-vector multiplications in Galerkin methods for the numerical solution of partial differential equations.  Also note that sparse grid functions do not possess some properties which full grid functions have, e.g. a sparse grid function need not be monotone [32, 34].\cite{Garcke2013}\\
+
+6. The sparse grid structure introduced so far defines an a priori selection of grid points that is optimal if certain smoothness conditions are met, i.e. if the function has bounded second mixed derivatives, and no further knowledge of the function is known or used.\cite{Garcke2013}\\
+
+7. If the aim is to approximate functions which do not fulfill this smoothness condition, or to represent functions that show significantly differing characteristics, e.g. very steep regions beyond flat ones, spatially adaptive refinement may be used as well. Depending on the characteristics of the problem and function at hand adaptive refinement strategies decide which points, and corresponding basis functions, should be incrementally added to the sparse grid representation to increase the accuracy.\cite{Garcke2013}\\
+
+8. In the sparse grid setting, usually an error indicator coming directly from the hierarchical basis is employed [14, 23, 34, 35]: depending on the size of the hierarchical surplus it is decided whether a basis function should be marked for further improvement or not. This is based on two observations: First, the hierarchical surplus gives the absolute change in the discrete representation at point xl;j due to the addition of the corresponding basis function 'l;j , it measures its contribution in a given sparse grid representation (15) in the maximum-norm. And second, a hierarchical surplus represents discrete second derivatives according to (12) and hence can be interpreted as a measure of the smoothness of the considered function at point \cite{Garcke2013}\\
+
+9. Further details on spatially adaptive sparse grids, their realization and the state of the art can be found in [14, 34, 35].\cite{Garcke2013}\\
+
+10. two different hierarchy presented.\cite{Garcke2013}\\
+
+11. one can build such a representation for a given function in an adaptive fashion, i.e. one chooses which component functions up to which ANOVA order are used for a reasonable approximation of some f . If the ANOVA order can be limited to q with q   d , the complexity estimates do not depend on the dimension d but on the ANOVA order q, allowing the treatment of even higher dimensional problems. An ANOVA-based dimension adaptive refinement algorithm in the hierarchical sparse grid basis is presented and evaluated in [14].\cite{Garcke2013}\\
+
+12. This approach can have numerical advantages over working directly in the hierarchical basis, where e.g. the stiffness matrix is not sparse and efficient computations of the matrix-vector-product are challenging in the implementation [1, 3, 6, 14, 34, 44].\cite{Garcke2013}\\
+
+13. The resulting function fnc lives in the sparse grid space Vns , where the combined interpolant is identical with the hierarchical sparse grid interpolant fns (proof in page 73). but solution obtained with the combination technique fnc for the numerical treatment of partial differential equations, i.e. when the solutions on the partial grids are combined according to the combination formula (28), is in general not the sparse grid solution fns . However, the approximation property is of the same order as long as a certain series expansion of the error exists [25]. Its existence was shown for model-problems in [9].\cite{Garcke2013}\\ % it is a copy of some part of 20
+
+14. one can view the combination technique as an approximation of a projection into the underlying sparse grid space. The combination technique is then an exact projection into the sparse grid space if and only if the partial projections commute, i.e. the commutator PV1  PV2   WD PV1 PV2   PV2 PV1 is zero for all pairs of involved grids [27].\cite{Garcke2013}\\
+
+15. so-called dimension adaptive procedure one considers an index set I which only needs to fulfill the following admissibility condition and one especially assumes here that q<<d , so that the computational complexity depends on the so-called superposition (or effective) dimension q. The size of each grid l is now of order O(q...)  (page 76 and 77), Further details on dimension adaptive algorithms and suitable refinement strategies for the sparse combination technique can be found in [17, 19, 21]. \cite{Garcke2013}\\
+
+16. Optimized combination coefficients are in particular relevant for dimension adaptive approaches [17, 19]. build functional and minimize it. \cite{Garcke2013}\\
+
+17. Optimized combination technique requires the solution of a system with an overhead and results in an increase in computational complexity. In specific situations the computational complexity can be smaller though [16].\cite{Garcke2013}\\
+)\\
+
+
+Finally some general important points and remarks will be discussed. These remarks will show the important factors at play in these kind of problems and maybe give insight for future work.
+
+\section{Some General Discussions and Points}
+1. The resulting algorithm can be used as a solver and within a preconditioner. it can also be applied as a preconditioner for the full grid problem to speed up a basic iterative solver. \cite{Griebel1992} \\
+
+\subsection{Argument of error and convergence}
+1. We show that the condition number of such a stiffness matrix for multilevel splitting of finite element spaces behaves like $O((log \kappa)^2) $ where $\kappa$ is the condition number of the stiffness matrix with respect to a nodal basis. \cite{Yserentant1986} \\
+2. error satisfies $O({h}^2_nlog({h}^{-1}_n))$ (pointwise and with respect to the $L_2$- and $L_\infty$-norm).\cite{Griebel1992b} \\
+
+3. For the Poisson equation on the unit square it is proved that the combined solution converges with order $O(h)$ in the energy norm and with order $O(h^2log h)$ in the $L^2$-norm. (journals 5 and 9 are very similar aka poisson vs. second-order elliptic differential equations-9 general of 5) \cite{Pflaum1993}\\
+
+\subsection{Argument of Preconditioner plus solver}
+1. The resulting algorithm can be used as a solver and within a preconditioner. it can also be applied as a preconditioner for the full grid problem to speed up a basic iterative solver. \cite{Griebel1992} \\
+
+2. In addition to being a solver in its own right, the combination method can be used as a parallel preconditioner for the full grid problem. Then, a basic iterative method is accelerated substantially and shows nearly optimal, i.e. multigrid-like convergence behavior, if the accuracy of the solution is required only up to the truncation error.\cite{Griebel1992} \\
+
+\textbf{Argument of relation between hierarchical basis and nodal basis}\\
+1. As the representation of a finite element function with respect to a hierarchical basis can be converted very easily and quickly to its representation with respect to a nodal basis, our results mean that the method of conjugate gradients needs only logaritm of the dimension of the finite element space steps and computer operations to reduce the energy norm of the error by a given factor if one uses hierarchical bases or related preconditioning procedures. \cite{Yserentant1986} \\
+
+2.Two dimensional sparse grids contain only $O({h}^{-1}log({h}^{-1}))$ grid points in contrast to the usually used full $O({h}^{-2}) $ grids, whereas for a sufficiently smooth function the accuracy of the representation is only slightly deteriorated. from $O(h^2) $ to $O(h^{2}log({h}^{-1}))$. \cite{Griebel1992b} \\
+
+3. Using this type of hierarchical basis the calculation with functions defined on different grids and spaces is simplified. For example, the addition of two functions defined on different grids is reduced to the addition of the single coefficients. This is due to the fact that now the basis functions that are associated with the grid points which belong to both grids are just the same. \cite{Griebel1992b} \\
+
+4. The transformation of the coefficients of a function on grid represented in standard nodal basis to its representation in hierarchical basis can be implemented by a constant number of operations per grid point. The transformation to the hierarchical basis representation is done by the algorithm in \cite{Griebel1992b}. \\
+
+5. The advantage of using the hierarchical basis representation during the combination process is that no interpolation to additional grid points has to be performed explicitly: For each 'missing' grid point, the interpolated value would be zero in hierarchical basis representation, and thus can be omitted during the combination of solutions\cite{Griebel1995} \\
+
+6. One of the main advantages of hierarchical bases compared with standard nodal point bases is probably the fact that the basis gets a multilevel structure. Thus, we can now distinguish between high-level basis functions with a large support that usually (in the smooth case, at least) already contain a significant part of the information, and functions living on lower levels whose contribution to an interpolant or a finite element approximation is rather small. The decrease of the hierarchical coefficients from level to level can be used, of course, to control adaptive grid refinement, but, if it is combined with a tensor product approach for the higher dimensional case, it can be used for an a priori reduction of the number of grid points involved in the calculation, too.\cite{Bungartz1998}\\
+
+7. The hierarchical coefficient or hierarchical surplus itself can be used to indicate the smoothness of u at the corresponding grid point and, consequently, the necessity to refine the grid here.\cite{Bungartz1998}\\
+
+8. The elements of the sparse grid space can be represented in a hierarchical basis [27] and many algorithms for hierarchical basis methods including wavelets can be used for the solution [5,20]. Compared to the commonly used nodal basis, a hierarchical basis of, e.g. multilinear functions has its disadvantages, as the corresponding matrices have reduced sparsity and a less regular structure. This is due to the fact that the supports of the lower level basis functions are large and intersect nontrivially with many higher level basis functions. These difficulties increase with dimension.
+An efficient way to avoid the problem of reduced sparsity is given by the combination technique. \cite{Hegland2007}\\
+
+
+

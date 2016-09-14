@@ -1,12 +1,15 @@
 \chapter{Results}
 \label{chapter:results}
-In this chapter the result of our implementation will be presented and discussed in details about the important matters which can be observed.Trying to tackle the different schemes and naturally compare it to a full grid method is the objective here. \\
-The problem at hand might seem very trivial at first as the interpolation problems is being investigated in two dimension. However, the flexibility of the implementation shows how it can easily be extended to the higher dimension. Not only, the solution at hand is the base for higher dimension it can also be a base for solution on different applications such as regression and data fitting problem in Data mining, a partial differential equation solver for elliptic, parabolic problem, projection method and preconditioner for multigrid-like methods, and more importantly in computational mechanics, chemistry or physics. However, by realizing this hierarchy of complexity of problems it can be observed that interpolation problem is the fundamental method which is the task discussed here. The author acknowledges the drawbacks of method mainly in regard to convergence but tries to discuss the reasons he believe this current implementation can resolve a part of those problems.\\
+In this chapter the result of the current implementation will be presented and discussed in details to have an insight of the important observable issues. Trying to tackle the different schemes and naturally compare it to a full grid method is the primary objective here. \\
+The problem at hand might seem very trivial at first as the interpolation problems is being investigated in two dimension. However, the flexibility and robustness of the implementation shows how it can easily be extended to the higher dimension. It is also how an complex data structure has been implemented to give a proper base for future works.\\
+In addition, Not only the solution at hand is the base for higher dimension it can also be a base for different applications such as regression and data fitting problem in data mining, preconditioner for multigrid-like methods, partial differential equation solver in elliptic and parabolic problems, and more importantly in computational mechanics, chemistry or physics a combination. However, by realizing this hierarchy of complexity of problems it can be observed that interpolation problem is the fundamental method which is the task discussed here. The author acknowledges the drawbacks of method mainly in regard to convergence but tries to discuss the reasons believed in this current implementation which can resolve a part of those problems.\\
 As discussed earlier in the implementation chapter, the idea here is to project the result of the combination technique to the full grid. This has already been done by the fact that the underlying idea of the current implementation is to first project the function values of different level vector grids all to be combined with into a corresponding full grid and then combine them pointwise. This way some advantages and some disadvantage compared to other combination schemes presented in the literature can be thought. \\
-Firstly, the obvious disadvantage would be the fact that by projection of all grids to a full grid requires a lot of extra memory consumption and this is exactly against the idea of rectifying curse of dimensionality. However, there is a solution to this problem though more clear after showing that the adaptive refinement strategy works. Assuming it works for now, it gives the rise to idea to use a coarse full grid and use adaptive refinement in the areas needed. This way, Same order of general error  will be achieved but less storage than same full grid which needs higher resolution in the first place. In the worst case scenario, the full grid resolution will be achieved and the solution structure requires exactly the number of grids added plus subtracted multiplied by the storage required for the normal full grid.\\
-In contrast, the advantage that can be achieved in this method is that since the required tasks performed for each of the grids in the hierarchy of combination method separately, the extra effort is just from a projection. Therefore, using a very efficient projection method there are not that many operation added to the solution which basically means less computational effort compared to solution on normal full grid method.\\
+Firstly, the obvious disadvantage would be the fact that by projection of all grids to a full grid requires a lot of extra memory consumption and this is exactly against the idea of rectifying curse of dimensionality. However, a solution will be described here to address this problem but perhaps it wil be more clear after it is observed the adaptive refinement strategy works. Assuming it works for now, it gives the rise to idea that it is required to use a coarse grid and use adaptive refinement in the areas needed. This way, total error of same order will be achieved with less storage and operations in comparison to full grid which needs high resolution in the first place. In the worst case scenario, the full grid resolution will be achieved and the solution structure requires exactly the number of grids in combination technique scheme multiplied by the storage required for the normal full grid. Since high valued level vector is not used in this case then it is not that much dramatic weakness.\\
+In contrast, the advantage that can be achieved in this method is that while the required tasks performed separately for each of the grids in the implemented version of combination method is same as normal combination technique the extra effort is just from a projection. Therefore, using a very efficient projection method there are not that many operation added to the solution which basically means less computational effort compared to solution on normal full grid method.\\
 Another advantage of this, as discussed earlier, can be possibility to start with a coarse grain solution and adaptively refine to areas needed. Probably later investigation of using lower resolution schemes for lower subtree problems can show better result for storage space and memory usage. \\
 Note that conventionally we are using the unit square domain. The reason is mathematically the division of this domain is more easy and straightforward but our implementation can work with any rectangular domain. 
+
+%figure rectangle and figure square
 
 \section{Verification of components}
 In any case, as for any scientific approach we first need to verify that our implementation works as expected. This has been done by comparison of the solution to normal full grid problem. we present here different test cases to be sure that in all different cases we get proper results.
@@ -18,6 +21,11 @@ In any case, as for any scientific approach we first need to verify that our imp
 \end{enumerate}
 In each case we try to compare the error of combination technique given the default scheme of $\overrightarrow{l}=(4,4)$.\\
 In every case we will draw the figures of the difference to observe better how the error is spread in the domain. For special test case 1 since the bilinear interpolation is used we can see the combination technique gives the perfect solution. The reason obviously is the nature of problem. Since bilinear interpolation is performed in one direction first and later in other direction it can be observe that interpolation of a function which is not of terms $x^even \cdot y^even$ gives no error.
+%figure case 1 verification difference, combigrid, fullgrid
+%figure case 2 verification difference, combigrid, fullgrid
+%figure case 3 verification difference, combigrid, fullgrid
+%figure case 4 verification difference, combigrid, fullgrid
+
 % give the table of errors
 \begin{center}
  \begin{tabular}{| c | c | c |}
@@ -35,15 +43,21 @@ In every case we will draw the figures of the difference to observe better how t
  \end{tabular}
 \end{center}
 
-
-
 \section{results of local refinement (spatial adaptivity)}
 Based on the the fact that the current method has been verified, we will check the two different case for local refinement, one simply to be ensured our implementation of recursive tree works fine and second for the test cases presented above. 
 \subsection{error indicator based on predefined error function}
-As explained earlier the idea here to come up with some way as a test case for local refinement. Based on author's background in mesh generation, there is a technique specially for unstructured grid genreration with background predefined function \cite{Henshaw1996} and adaptive grid generation algorithm\cite{Ebeida2010}. Motivated by ideas presented we will enforce a predefined error to the problem by defining an error function which is higher than our threshold for certain regions. This way we can predict exactly how the local refinement should work. For better clarity we present the solution tree structure and the predefined function with it's image on the unit square problem.\\ %put figurte
+As explained earlier the idea here to come up with some way as a test case for local refinement. Based on author's background in mesh generation, there is a technique specially for unstructured grid genreration with background predefined function \cite{Henshaw1996} and adaptive grid generation algorithm\cite{Ebeida2010}. Motivated by ideas presented we will enforce a predefined error to the problem by defining an error function which is higher than our threshold for certain regions. This way we can predict exactly how the local refinement should work. For better clarity we present the solution tree structure and the predefined function with it's image on the unit square problem.\\
+% figure of tree from aastha
+% figure of predefined error from aastha
+% figure predefined error from VTK
+
 As we can see above the solution to this case match our expectation so based on that we perform our final result.
 \subsection{error indicator based on solution of combination technique}
-Now that the code has been verified in both adaptive and non-adaptive cases, further investigation into the actual problem at hand will be on focus which is performing the adaptation in regard to local error of solution. For that, an error indicator has been introduced which compares the solution to the full grid method. Actually, the primary reason we defined some extra test cases in the verification part was that we can see how the local refinement will work with different cases, otherwise there is much similarity between case 2, 3 and 4. \\
+Now that the code has been verified in both adaptive and non-adaptive cases, further investigation into the actual problem at hand will be focused on, which is performing the adaptation in correspondent with the local error of solution in each node or subtree. For that, an error indicator has been introduced which compares the solution to the full grid method. Actually, the primary reason we defined some extra test cases in the verification part was that we can see how the local refinement will work with different cases, otherwise there is much similarity between case 2, 3 and 4. \\
+
+%adaptive case 2: before refinement and after refinement
+%adaptive case 3: before refinement and after refinement
+%adaptive case 4: before refinement and after refinement
 
 Another important note is that we always need to visualized the error in the solution because from the image of the solution with human eye is hardly possible to distinguish the differences.
 
@@ -55,4 +69,6 @@ In the last section the error is visualized in unit square simply because it doe
 \end{enumerate}
 The reason for these two scheme is that the results should be separated and based on the factor at play.
 
+%figure error threshold independent
+%figure refinement level constant
 

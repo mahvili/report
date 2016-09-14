@@ -48,4 +48,11 @@ Now that the code has been verified in both adaptive and non-adaptive cases, fur
 Another important note is that we always need to visualized the error in the solution because from the image of the solution with human eye is hardly possible to distinguish the differences.
 
 \section{Error and Accuracy}
-In the last section the error is visualized in unit square simply because it doesn't make sense to just give one total error value for an special schemes. The difference here is to have different schemes performed in a loop/recursive way and then check how the total error acts. Based  
+In the last section the error is visualized in unit square simply because it doesn't make sense to just give one total error value for a special schemes. The difference here is to have multiple refinement level performed in a loop/recursive way and then check how the total error acts. Based on arguments in literature a logarithmic behavior is expected. Key factors in the implemented code which are at play are threshold for the error and the level of refinement. Based on them some other schemes imagined here are as follow:
+\begin{enumerate}
+\item Threshold independent, refinement level changing.
+\item Threshold changing, refinement level constant.
+\end{enumerate}
+The reason for these two scheme is that the results should be separated and based on the factor at play.
+
+

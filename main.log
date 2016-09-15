@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 SEP 2016 07:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 SEP 2016 08:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -674,7 +674,7 @@ LaTeX Info: Redefining \nameref on input line 46.
 \openout4 = `main.out'.
 
  (./components/cover.tex
-<styles/tum_logo.png, id=158, 53.9616pt x 28.4262pt>
+<styles/tum_logo.png, id=166, 53.9616pt x 28.4262pt>
 File: styles/tum_logo.png Graphic file (type png)
  <use styles/tum_logo.png>
 Package pdftex.def Info: styles/tum_logo.png used on input line 27.
@@ -696,7 +696,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 45.
-<styles/cse_logo.jpg, id=160, 111.5367pt x 39.7485pt>
+<styles/cse_logo.jpg, id=168, 111.5367pt x 39.7485pt>
 File: styles/cse_logo.jpg Graphic file (type jpg)
 
 <use styles/cse_logo.jpg>
@@ -1024,22 +1024,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--78
 
 ]
 Chapter 3.
+[15] [16] <figures//NodalBasisLevel3.png, id=516, 310.15875pt x 263.48438pt>
+File: figures//NodalBasisLevel3.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
+<use figures//NodalBasisLevel3.png>
+Package pdftex.def Info: figures//NodalBasisLevel3.png used on input line 111.
+(pdftex.def)             Requested size: 212.3475pt x 180.39322pt.
+
+<figures//HierBasisLevel3.png, id=517, 264.23718pt x 284.56313pt>
+File: figures//HierBasisLevel3.png Graphic file (type png)
+
+<use figures//HierBasisLevel3.png>
+Package pdftex.def Info: figures//HierBasisLevel3.png used on input line 117.
+(pdftex.def)             Requested size: 212.3475pt x 228.67987pt.
+ [17 <./figures//NodalBasisLevel3.png> <./figures//HierBasisLevel3.png>] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 206--209
 
  []
 
-[15] [16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 200--203
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
-
- []
-
-) [18] [19] [20
+) [19] [20
 
 ] [21] [22] (./chapters/MyImplementation.tex
 Chapter 4.
@@ -1047,7 +1055,7 @@ LaTeX Font Info:    Try loading font information for TS1+ppl on input line 33.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-<figures//GeneralTree.pdf, id=555, 468.24937pt x 289.08pt>
+<figures//GeneralTree.pdf, id=572, 468.24937pt x 289.08pt>
 File: figures//GeneralTree.pdf Graphic file (type pdf)
 
 <use figures//GeneralTree.pdf>
@@ -1067,7 +1075,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--58
 
  []
 
-<figures//LinkedStrucGenTree1.pdf, id=557, 234.8775pt x 131.74219pt>
+<figures//LinkedStrucGenTree1.pdf, id=574, 234.8775pt x 131.74219pt>
 File: figures//LinkedStrucGenTree1.pdf Graphic file (type pdf)
 
 <use figures//LinkedStrucGenTree1.pdf>
@@ -1075,7 +1083,7 @@ Package pdftex.def Info: figures//LinkedStrucGenTree1.pdf used on input line 63
 .
 (pdftex.def)             Requested size: 143.00873pt x 80.21385pt.
 
-<figures//LinkedStrucGenTree2.pdf, id=558, 635.37375pt x 532.23843pt>
+<figures//LinkedStrucGenTree2.pdf, id=575, 635.37375pt x 532.23843pt>
 File: figures//LinkedStrucGenTree2.pdf Graphic file (type pdf)
 
 <use figures//LinkedStrucGenTree2.pdf>
@@ -1108,7 +1116,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
-<figures//TransversalOrderedTree.pdf, id=568, 624.08156pt x 274.77657pt>
+<figures//TransversalOrderedTree.pdf, id=585, 624.08156pt x 274.77657pt>
 File: figures//TransversalOrderedTree.pdf Graphic file (type pdf)
 
 <use figures//TransversalOrderedTree.pdf>
@@ -1129,7 +1137,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
-<figures//NodeQuadTree.pdf, id=582, 314.67563pt x 184.43906pt>
+<figures//NodeQuadTree.pdf, id=598, 314.67563pt x 184.43906pt>
 File: figures//NodeQuadTree.pdf Graphic file (type pdf)
 
 <use figures//NodeQuadTree.pdf>
@@ -1183,14 +1191,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
 [27
 
-] <figures//results/1/square.png, id=630, 1428.33624pt x 941.5175pt>
+] <figures//results/1/square.png, id=646, 1428.33624pt x 941.5175pt>
 File: figures//results/1/square.png Graphic file (type png)
 
 <use figures//results/1/square.png>
 Package pdftex.def Info: figures//results/1/square.png used on input line 21.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/1/rectangle.png, id=631, 1428.33624pt x 941.5175pt>
+<figures//results/1/rectangle.png, id=647, 1428.33624pt x 941.5175pt>
 File: figures//results/1/rectangle.png Graphic file (type png)
 
 <use figures//results/1/rectangle.png>
@@ -1204,7 +1212,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
 [28 <./figures//results/1/square.png (PNG copy)> <./figures//results/1/rectangl
 e.png (PNG copy)>]
-<figures//results/2/case1-verification-combination.png, id=645, 1428.33624pt x 
+<figures//results/2/case1-verification-combination.png, id=661, 1428.33624pt x 
 941.5175pt>
 File: figures//results/2/case1-verification-combination.png Graphic file (type 
 png)
@@ -1213,7 +1221,7 @@ Package pdftex.def Info: figures//results/2/case1-verification-combination.png
 used on input line 52.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case1-verification-fullgrid.png, id=646, 1428.33624pt x 941
+<figures//results/2/case1-verification-fullgrid.png, id=662, 1428.33624pt x 941
 .5175pt>
 File: figures//results/2/case1-verification-fullgrid.png Graphic file (type png
 )
@@ -1222,7 +1230,7 @@ Package pdftex.def Info: figures//results/2/case1-verification-fullgrid.png use
 d on input line 59.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case2-verification-combination.png, id=647, 1428.33624pt x 
+<figures//results/2/case2-verification-combination.png, id=663, 1428.33624pt x 
 941.5175pt>
 File: figures//results/2/case2-verification-combination.png Graphic file (type 
 png)
@@ -1231,7 +1239,7 @@ Package pdftex.def Info: figures//results/2/case2-verification-combination.png
 used on input line 71.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case2-verification-fullgrid.png, id=648, 1428.33624pt x 941
+<figures//results/2/case2-verification-fullgrid.png, id=664, 1428.33624pt x 941
 .5175pt>
 File: figures//results/2/case2-verification-fullgrid.png Graphic file (type png
 )
@@ -1240,7 +1248,7 @@ Package pdftex.def Info: figures//results/2/case2-verification-fullgrid.png use
 d on input line 78.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case3-verification-combination.png, id=649, 1428.33624pt x 
+<figures//results/2/case3-verification-combination.png, id=665, 1428.33624pt x 
 941.5175pt>
 File: figures//results/2/case3-verification-combination.png Graphic file (type 
 png)
@@ -1249,7 +1257,7 @@ Package pdftex.def Info: figures//results/2/case3-verification-combination.png
 used on input line 90.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case3-verification-fullgrid.png, id=650, 1428.33624pt x 941
+<figures//results/2/case3-verification-fullgrid.png, id=666, 1428.33624pt x 941
 .5175pt>
 File: figures//results/2/case3-verification-fullgrid.png Graphic file (type png
 )
@@ -1258,7 +1266,7 @@ Package pdftex.def Info: figures//results/2/case3-verification-fullgrid.png use
 d on input line 97.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case4-verification-combination.png, id=651, 1428.33624pt x 
+<figures//results/2/case4-verification-combination.png, id=667, 1428.33624pt x 
 941.5175pt>
 File: figures//results/2/case4-verification-combination.png Graphic file (type 
 png)
@@ -1267,7 +1275,7 @@ Package pdftex.def Info: figures//results/2/case4-verification-combination.png
 used on input line 109.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case4-verification-fullgrid.png, id=652, 1428.33624pt x 941
+<figures//results/2/case4-verification-fullgrid.png, id=668, 1428.33624pt x 941
 .5175pt>
 File: figures//results/2/case4-verification-fullgrid.png Graphic file (type png
 )
@@ -1283,7 +1291,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<figures//results/2/case1-verification-difference.png, id=653, 1428.33624pt x 9
+<figures//results/2/case1-verification-difference.png, id=669, 1428.33624pt x 9
 41.5175pt>
 File: figures//results/2/case1-verification-difference.png Graphic file (type p
 ng)
@@ -1292,7 +1300,7 @@ Package pdftex.def Info: figures//results/2/case1-verification-difference.png u
 sed on input line 129.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case2-verification-difference.png, id=654, 1428.33624pt x 9
+<figures//results/2/case2-verification-difference.png, id=670, 1428.33624pt x 9
 41.5175pt>
 File: figures//results/2/case2-verification-difference.png Graphic file (type p
 ng)
@@ -1301,7 +1309,7 @@ Package pdftex.def Info: figures//results/2/case2-verification-difference.png u
 sed on input line 136.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case3-verification-difference.png, id=655, 1428.33624pt x 9
+<figures//results/2/case3-verification-difference.png, id=671, 1428.33624pt x 9
 41.5175pt>
 File: figures//results/2/case3-verification-difference.png Graphic file (type p
 ng)
@@ -1310,7 +1318,7 @@ Package pdftex.def Info: figures//results/2/case3-verification-difference.png u
 sed on input line 142.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case4-verification-difference.png, id=656, 1428.33624pt x 9
+<figures//results/2/case4-verification-difference.png, id=672, 1428.33624pt x 9
 41.5175pt>
 File: figures//results/2/case4-verification-difference.png Graphic file (type p
 ng)
@@ -1340,7 +1348,7 @@ Underfull \vbox (badness 6268) has occurred while \output is active []
 gures//results/2/case3-verification-fullgrid.png (PNG copy)> <./figures//result
 s/2/case4-verification-combination.png (PNG copy)> <./figures//results/2/case4-
 verification-fullgrid.png (PNG copy)>]
-<figures//results/3/QuadTreeRoot.pdf, id=675, 651.18282pt x 457.71pt>
+<figures//results/3/QuadTreeRoot.pdf, id=691, 651.18282pt x 457.71pt>
 File: figures//results/3/QuadTreeRoot.pdf Graphic file (type pdf)
 
 <use figures//results/3/QuadTreeRoot.pdf>
@@ -1351,7 +1359,7 @@ Package pdftex.def Info: figures//results/3/QuadTreeRoot.pdf used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures//results/3/QuadTreeSquare.pdf, id=676, 526.96875pt x 378.66469pt>
+<figures//results/3/QuadTreeSquare.pdf, id=692, 526.96875pt x 378.66469pt>
 File: figures//results/3/QuadTreeSquare.pdf Graphic file (type pdf)
 
 <use figures//results/3/QuadTreeSquare.pdf>
@@ -1359,7 +1367,7 @@ Package pdftex.def Info: figures//results/3/QuadTreeSquare.pdf used on input li
 ne 198.
 (pdftex.def)             Requested size: 286.01747pt x 205.53325pt.
 
-<figures//results/3/predefined-refinement-vtk.png, id=677, 1428.33624pt x 941.5
+<figures//results/3/predefined-refinement-vtk.png, id=693, 1428.33624pt x 941.5
 175pt>
 File: figures//results/3/predefined-refinement-vtk.png Graphic file (type png)
  <use figures//results/3/predefined-refinement-vtk.png>
@@ -1371,7 +1379,7 @@ on input line 204.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<figures//results/3/predefined-error-vtk.png, id=678, 1428.33624pt x 941.5175pt
+<figures//results/3/predefined-error-vtk.png, id=694, 1428.33624pt x 941.5175pt
 >
 File: figures//results/3/predefined-error-vtk.png Graphic file (type png)
  <use figures//results/3/predefined-error-vtk.png>
@@ -1391,7 +1399,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--230
 res//results/2/case2-verification-difference.png (PNG copy)> <./figures//result
 s/2/case3-verification-difference.png (PNG copy)> <./figures//results/2/case4-v
 erification-difference.png (PNG copy)>]
-<figures//results/4/case2-adaptive-before-refinement.png, id=692, 1428.33624pt 
+<figures//results/4/case2-adaptive-before-refinement.png, id=708, 1428.33624pt 
 x 941.5175pt>
 File: figures//results/4/case2-adaptive-before-refinement.png Graphic file (typ
 e png)
@@ -1400,7 +1408,7 @@ Package pdftex.def Info: figures//results/4/case2-adaptive-before-refinement.pn
 g used on input line 236.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/4/case2-adaptive-after-refinement.png, id=693, 1428.33624pt x
+<figures//results/4/case2-adaptive-after-refinement.png, id=709, 1428.33624pt x
  941.5175pt>
 File: figures//results/4/case2-adaptive-after-refinement.png Graphic file (type
  png)
@@ -1413,7 +1421,7 @@ Package pdftex.def Info: figures//results/4/case2-adaptive-after-refinement.png
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<figures//results/4/case3-adaptive-before-refinement.png, id=694, 1428.33624pt 
+<figures//results/4/case3-adaptive-before-refinement.png, id=710, 1428.33624pt 
 x 941.5175pt>
 File: figures//results/4/case3-adaptive-before-refinement.png Graphic file (typ
 e png)
@@ -1422,7 +1430,7 @@ Package pdftex.def Info: figures//results/4/case3-adaptive-before-refinement.pn
 g used on input line 256.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/4/case3-adaptive-after-refinement.png, id=695, 1428.33624pt x
+<figures//results/4/case3-adaptive-after-refinement.png, id=711, 1428.33624pt x
  941.5175pt>
 File: figures//results/4/case3-adaptive-after-refinement.png Graphic file (type
  png)
@@ -1435,7 +1443,7 @@ Package pdftex.def Info: figures//results/4/case3-adaptive-after-refinement.png
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<figures//results/4/case4-adaptive-before-refinement.png, id=696, 1428.33624pt 
+<figures//results/4/case4-adaptive-before-refinement.png, id=712, 1428.33624pt 
 x 941.5175pt>
 File: figures//results/4/case4-adaptive-before-refinement.png Graphic file (typ
 e png)
@@ -1444,7 +1452,7 @@ Package pdftex.def Info: figures//results/4/case4-adaptive-before-refinement.pn
 g used on input line 276.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/4/case4-adaptive-after-refinement.png, id=697, 1428.33624pt x
+<figures//results/4/case4-adaptive-after-refinement.png, id=713, 1428.33624pt x
  941.5175pt>
 File: figures//results/4/case4-adaptive-after-refinement.png Graphic file (type
  png)
@@ -1457,7 +1465,7 @@ Package pdftex.def Info: figures//results/4/case4-adaptive-after-refinement.png
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<figures//results/5/Error-RefinementLevel.png, id=700, 1254.6072pt x 684.6378pt
+<figures//results/5/Error-RefinementLevel.png, id=716, 1254.6072pt x 684.6378pt
 >
 File: figures//results/5/Error-RefinementLevel.png Graphic file (type png)
  <use figures//results/5/Error-RefinementLevel.png>
@@ -1468,7 +1476,7 @@ nput line 308.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures//results/5/Error-Threshod.png, id=701, 1257.498pt x 722.7pt>
+<figures//results/5/Error-Threshod.png, id=717, 1257.498pt x 722.7pt>
 File: figures//results/5/Error-Threshod.png Graphic file (type png)
 
 <use figures//results/5/Error-Threshod.png>
@@ -1502,23 +1510,18 @@ Appendix A.
 
  [41
 
-] (./main.lof)
-\tf@lof=\write7
-\openout7 = `main.lof'.
-
-) [42] (./main.bbl [43
+]) [42] (./main.bbl [43
 
 
 ] [44] [45])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
  [46]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
-
-(./main.aux)
+ (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 52461333E7DEB0F840356840E041FECC;2664.
+(rerunfilecheck)             Checksum: A440A27AAD19BD23346E68D1609787E2;2827.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1526,10 +1529,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 124.
  ) 
 Here is how much of TeX's memory you used:
- 11175 strings out of 493089
- 178444 string characters out of 6134842
- 323427 words of memory out of 5000000
- 14122 multiletter control sequences out of 15000+600000
+ 11188 strings out of 493089
+ 178810 string characters out of 6134842
+ 323495 words of memory out of 5000000
+ 14133 multiletter control sequences out of 15000+600000
  28245 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,14n,56p,1200b,524s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1551,10 +1554,10 @@ onts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw
 /palatino/uplri8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/yh
 math/yhcmex.pfb>
-Output written on main.pdf (60 pages, 1591685 bytes).
+Output written on main.pdf (60 pages, 1605115 bytes).
 PDF statistics:
- 921 PDF objects out of 1000 (max. 8388607)
- 791 compressed objects within 8 object streams
- 220 named destinations out of 1000 (max. 500000)
- 478 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 938 PDF objects out of 1000 (max. 8388607)
+ 803 compressed objects within 9 object streams
+ 222 named destinations out of 1000 (max. 500000)
+ 504 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,14 +2,8 @@
 \label{chapter:methods}
 This chapter discusses the mathematical techniques used in this thesis. The main theories discussed here are firstly, concepts of nodal and hierarchical basis for a function representation in multidimensional spaces and consequently based on hierarchical bases theories of sparse grids and combination techniques. Respectively, these main methods construct an image about mathematical reasoning behind methods used in this thesis.
 
-\section{Sparse grid method and hierarchical basis}
-Following \cite{Zenger1990} finite element space is the direct sum of the subspaces where the error propagation is equal or larger than some prescribed tolerance. This leads to an approximation space that corresponds to a sparse grid in place of a full grid. Another motivation for sparse grids is to represent any sparse grid function as a linear combination of its interpolants on the regular full grids. This requires us to seek a certain linear combination of full grid spaces to create a sparse grid space. This approach do away with the need for more complicated data structures than a few arrays to store a sparse grid function and requires only regular data structures.\cite{Griebel1992b} \\
-
-With a cursory glance, the hierarchical matrices seems complicated however one needs to factorize the matrices into the general nodal basis stiffness matrix and sparse matrices. It is not required to assemble the discretization matrix.\cite{Yserentant1986}. The hierarchical basis simplifies the calculations with the functions that are defined in different grids. As an example, one can simply add the single coefficients for calculation the addition of two functions that are defined the different grids, because basis functions associated with the same grid points are exactly same\cite{Griebel1992b}.\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%nodal basis
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-For the mathematical representation of the nodal basis, the hierarchical basis and the sparse grids, work of Garcke \cite{Garcke2013} has been used. Following same notation, let' consider a multi-index $\underline{l} = (l_{1}, \dots, l_{d}) \in \mathbb{N}^{d}$ and an anisotropic grid $\Omega_{\underline{l}}$ with mesh size $h_{\underline{l}} := \left( h_{l_{1}}, \dots, h_{l_{d}}  \right) = 2^{-l} := \left( 2^{-l_{1}}, \dots, 2^{-l_{d}} \right)$.
+\section{Concept of nodal basis}
+First idea about nodal basis comes form the finite element method and it's splitting of function into a space. The function representation in that space can be done based on nodal basis which are set of functions existing in the space. For the mathematical representation of the nodal basis, the hierarchical basis and the sparse grids, work of Garcke \cite{Garcke2013} has been used. Following same notation, let's consider a multi-index $\underline{l} = (l_{1}, \dots, l_{d}) \in \mathbb{N}^{d}$ and an anisotropic grid $\Omega_{\underline{l}}$ with mesh size $h_{\underline{l}} := \left( h_{l_{1}}, \dots, h_{l_{d}}  \right) = 2^{-l} := \left( 2^{-l_{1}}, \dots, 2^{-l_{d}} \right)$.
 $\Omega_{\underline{l}}$ contains equidistant but different $h_{l_{t}}$ in coordinate direction $t, t = 1,\dots,d$ . Thus grid $\Omega$ consists of points
 
 %equation1 
@@ -41,11 +35,9 @@ These one dimensional functions are defined by :
      0, & \text{otherwise}
      \end{cases}
 \end{equation}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%hierarchical subspace splitting
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The conversion of the function coefficients on a grid from standard nodal basis to the representation in hierarchical basis is carried out by a constant operation count per grid point. The transformation to the hierarchical basis representation is done by the algorithm described thoroughly in \cite{Griebel1992b} which gives us further insight into the hierarchical basis. So, after defining the multi-indices, space, grids and one dimensional basis functions, one needs to define hierarchical difference space $W_{\underline{l}}$
+This representation is basically a representation on nodal basis.
+\section{Concept of hierarchical basis}
+The conversion of the function coefficients on a grid from standard nodal basis to the representation in hierarchical basis is carried out by a constant operation count per grid point. The transformation to the hierarchical basis representation is done by the algorithm described thoroughly in \cite{Griebel1992b} which gives us further insight into the hierarchical basis.  So, after defining the multi-indices, space, grids and one dimensional basis functions, one needs to define hierarchical difference space $W_{\underline{l}}$
 %equation6
 \begin{equation}
      W_{\underline{l}} := V_{\underline{l}} \setminus \bigoplus\limits_{t=1}^{d} V_{\underline{l}} - \underline{e}_{t}
@@ -66,6 +58,7 @@ It leads to
 \begin{equation}
      W_{\underline{l}} = span\left\{\phi_{\underline{l},\underline{j}} | \underline{j} \in \text{ B}_{\underline{l}}\right\}
 \end{equation}
+
 The hierarchical difference spaces leads us to multilevel subspace decomposition. We can write the spaces as the direct sum of the subspaces
 %equation9
 \begin{equation}
@@ -108,11 +101,30 @@ The generalized d-dimensional hierarchization operator can be written as
     \right]_{l_t,j_t}
      \right) f
 \end{equation}
+The hierarchical basis simplifies the calculations with the functions that are defined in different grids. As an example, one can simply add the single coefficients for calculation the addition of two functions that are defined the different grids, because basis functions associated with the same grid points are exactly same\cite{Griebel1992b}.\\
+Note that, with a cursory glance, the hierarchical matrices seems complicated however one needs to factorize the matrices into the general nodal basis stiffness matrix and sparse matrices. It is not required to assemble the discretization matrix.\cite{Yserentant1986}. 
+Comparison of nodal and hierarchical basis for one dimensional level three has been shown in figure. \ref{fig:NodalHierBasisLevel3}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Sparse grids
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+	\centering
+    \begin{subfigure}[b]{0.49\textwidth}
+	    \includegraphics[width =\textwidth]{/NodalBasisLevel3.png}
+	    %\vspace{3em}
+		\centering
+        \caption{Nodal basis}
+    \end{subfigure} 
+    \begin{subfigure}[b]{0.49\textwidth}    
+	    \includegraphics[width =\textwidth]{/HierBasisLevel3.png}
+		\centering    
+	 \caption{Hierarchical basis}
+    \end{subfigure} 
+    \caption{Nodal and hierarchical basis of level $n=3$. }
+    \label{fig:NodalHierBasisLevel3}
+\end{figure}		
+
+\section{Sparse Grids based on hierarchical subspace splitting}
  Efficient discretization techniques are imperative for majority of problems in numerical mathematics such as interpolation, point approximation etc. Introduced by Zenger in \cite{Zenger1990} and based on hierarchical tensor product approximation spaces, sparse grids provide an efficient approach to improve the ratio of invested storage and computing time to the achieved accuracy.\cite{Bungartz1998}\\
+  Following \cite{Zenger1990} finite element space is the direct sum of the subspaces where the error propagation is equal or larger than some prescribed tolerance. This leads to an approximation space that corresponds to a sparse grid in place of a full grid.\\
 Hierarchical basis functions with small support and small contribution to function representation are not included in discrete space level n .This type of grids are classisified as sparse grids. 
 %equation15 
 \begin{equation}
@@ -144,10 +156,7 @@ where as the interpolation error is defined as
 	{\parallel f - f_{n}^s \parallel}_{2} = \mathcal{O}\left(h_n^2\log{}(h_{n}^{-1})^{d-1} \right)
 \end{equation}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% combination technique 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Combination technique}
 To discretize a function $f$ on particular combination of anisotropic grids $\Omega_{\underline{l}}$ with uniform mesh size $h_{t} = 2^{l_{t}}$ in the t-th coordinate direction.  different grids have different mesh sizes for different directions. 
 all grids can be considered with
 %equation20
@@ -193,12 +202,9 @@ where $\chi^{I}$ is the characteristic function of I and is expressed as follows
      \end{cases}
 \end{equation}
 
-
-
-
 \section{Combination Technique}
-The crux of the combination technique is similar to the multilevel splitting of the finite element spaces which changes the nodal bases of the space with hierarchical bases. \cite{Yserentant1986} \\
-%The basic idea of combination technique is same as for multilevel splitting of finite element spaces is to replace the usual nodal bases of the finite element spaces by hierarchical bases. 
+Another motivation for sparse grids is to represent any sparse grid function as a linear combination of its interpolants on the regular full grids. This requires us to seek a certain linear combination of full grid spaces to create a sparse grid space. This approach do away with the need for more complicated data structures than a few arrays to store a sparse grid function and requires only regular data structures.\cite{Griebel1992b} \\
+The crux of the combination technique is similar to the multilevel splitting of the finite element spaces which changes the nodal bases of the space with hierarchical bases. \cite{Yserentant1986}
 The basis for combination techniques comes from the liner combination of independent solution of many problems with reduced size. \cite{Griebel1992}\\
 
 In total combination technique involves $O({h}^{-1}_nlog({h}^{-1}_n))$  unknowns in contrast to $O({h}^{-2}_n) $ unknowns for the conventional full grid approach however combination solution is nearly as accurate as the standard solution. it can be proven that error is only slightly worse than for the associated full grid.\cite{Griebel1992a, Griebel1992b}. To some extent the combination technique even works for non-smooth solutions. Now, ${h}^2_i$ and ${h}^2_j$ in have to be replaced by ${h}^\alpha_i$ , ${h}^\beta_j$ with appropriate $\alpha$ and $\beta$, but because of the properties of the combination technique the leading error terms still cancel. However, for the problems with severe singularities, the appropriate combination of adaptively refined grids is recommended.\cite{Griebel1992a}\\ It is seen that in some situations the combination technique leads to the cancellation of certain error terms in the asymptotic error expansion\cite{Griebel1992b} \\

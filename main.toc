@@ -20,8 +20,11 @@
 \contentsline {section}{\numberline {2.8}Works on Eigenvalue Problems}{12}{section.2.8}
 \contentsline {section}{\numberline {2.9}Works on Adaptive Methods}{13}{section.2.9}
 \contentsline {chapter}{\numberline {3}Methods}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Sparse grid method and hierarchical basis}{15}{section.3.1}
-\contentsline {section}{\numberline {3.2}Combination Technique}{18}{section.3.2}
+\contentsline {section}{\numberline {3.1}Concept of nodal basis}{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}Concept of hierarchical basis}{16}{section.3.2}
+\contentsline {section}{\numberline {3.3}Sparse Grids based on hierarchical subspace splitting}{17}{section.3.3}
+\contentsline {section}{\numberline {3.4}Combination technique}{18}{section.3.4}
+\contentsline {section}{\numberline {3.5}Combination Technique}{19}{section.3.5}
 \contentsline {part}{\numberline {II}Part Two: Implementation, Results and Conclusion}{21}{part.2}
 \contentsline {chapter}{\numberline {4}Current Implementation}{23}{chapter.4}
 \contentsline {section}{\numberline {4.1}General Ideas}{23}{section.4.1}
@@ -35,9 +38,8 @@
 \contentsline {chapter}{\numberline {6}Conclusion}{37}{chapter.6}
 \contentsline {section}{\numberline {6.1}Conclusion}{37}{section.6.1}
 \contentsline {section}{\numberline {6.2}Suggestions for future works}{37}{section.6.2}
-\contentsline {part}{Appendix}{41}{part*.28}
+\contentsline {part}{Appendix}{41}{part*.29}
 \contentsline {chapter}{\numberline {A}Detailed Descriptions}{41}{appendix.A}
 \contentsline {section}{\numberline {A.1}List of Figures}{41}{section.A.1}
-\contentsline {section}{\numberline {A.2}List of Tables}{41}{section.A.2}
-\contentsline {section}{\numberline {A.3}Source Code}{42}{section.A.3}
+\contentsline {section}{\numberline {A.2}Source Code}{42}{section.A.2}
 \contentsline {chapter}{\nonumberline Bibliography}{43}{appendix*.31}

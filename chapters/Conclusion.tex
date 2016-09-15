@@ -2,5 +2,56 @@
 \label{chapter:results}
 
 \section{Conclusion}
-final conclusion is written here
+This thesis investigated a new algorithmic approach using sparse grids and combination technique for solving ----- type of problems. It is advantageous in terms of its robustness and the independence of speed of convergence from the regular properties considered in boundary value problem. The approach is also suitable for parallelization due to its inherent coarse grain nature.\\
+
+--- verify that our implementation works as expected. This has been done by comparison of the solution to normal full grid problem
+
+--- following test cases with different functions
+ to ensure the functionality under a variety of cases.
+\begin{enumerate}
+\item $f(x)=x^2+y^2$
+\item $f(x)=x^2 \cdot y^2 $
+\item $f(x)=\sqrt[2]{x} \cdot \sqrt[2]{y}$
+\item $f(x)=16 \cdot x(1-x)y(1-y)$
+\end{enumerate}
+
+-- try to compare the error of combination technique, given the default scheme of $\overrightarrow{l}=(4,4)$.\\
+
+--Since the bilinear interpolation is used in this case, figure shows that the combination technique gives the perfect solution.
+
+--it can be observe that interpolation of a function which is not of terms $x^even \cdot y^even$ gives no error.
+
+----- Results of local refinement
+
+--next two different cases are checked for local refinement
+--enforce a predefined error to the problem by defining an error function which is higher than our threshold for certain regions
+--the solution to this case matches the expectations
+
+----Error indicator based on solution of combination technique
+--performing the adaptation in correspondence with the local error of solution in each node or subtree ; actual problem at hand
+
+-- an error indicator has been introduced which compares the solution to the full grid method
+
+--multiple refinement levels performed in a loop/recursive way and then check how the total error acts
+--logarithmic behavior
+
+
+-- To examine the independent effect of the two key factors,  threshold for the error and the level of refinement, two approaches are evaluated
+\begin{enumerate}
+\item Threshold independent, refinement level changing.
+\item Threshold changing, refinement level constant.
+\end{enumerate}
+
+-- the logarithmic error in both cases decreases with an increase in the level of mesh refinement and becomes constant after one point.
+
+--  case 2 shows much higher error in the threshold-independent approach than the refinement-constant approach due to the definition of the function, in which error in concentrated in one subsection
+
+Overall, the conclusion is that the approach works. Has been validated. Is promising for future research. It works very well in ---- cases and not well in ---- cases.
+
+
 \section{Suggestions for future works}
+- A detailed investigation of using lower resolution schemes for lower subtree problems can possibly show better result for storage space and memory usage.
+
+--  try the approach on more complicated  and a variety of cases to better understand the strengths and weaknesses of this approach(?)
+
+-- Extension to real-worl problems(?)

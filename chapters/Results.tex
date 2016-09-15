@@ -2,7 +2,7 @@
 \label{chapter:results}
 In this chapter the result of the current implementation will be presented and discussed in details to have an insight of the important observable issues. Trying to tackle the different schemes and naturally compare it to a full grid method is the primary objective here. \\
 
-The problem at hand might seem very trivial at first as the interpolation problem is being investigated in two dimensions. However, the flexibility and robustness of the implementation shows how it can easily be extended to the higher dimension. It is also how a complex data structure has been implemented to give a proper base for future works.\\
+%%%The problem at hand might seem very trivial at first as the interpolation problem is being investigated in two dimensions. However, the flexibility and robustness of the implementation shows how it can easily be extended to the higher dimension. It is also how a complex data structure has been implemented to give a proper base for future works.\\
 
 In addition, not only the solution at hand is the base for higher dimension, it can also be a base for different applications, such as regression and data fitting problem in data mining, preconditioner for multigrid-like methods, partial differential equation solver in elliptic and parabolic problems, and more importantly in computational mechanics, chemistry or physics. However, by realizing this hierarchy of complexity of problems, it can be observed that interpolation problem is the fundamental method which is the task discussed here. The author acknowledges the drawbacks of method mainly in regard to convergence, but also addresses the reasons which could resolve a part of those problems for the current implementation.\\
 
@@ -155,9 +155,15 @@ In every case, the figures showing the difference are compiled in figure \ref{fi
     \label{fig:results2case1-4Diff}
 \end{figure}
 
-% give the table of errors
-\begin{center}
- \begin{tabular}{| c | c | c |}
+
+The absolute values of the general error for cases 1 to 4 are compiled in the table \ref{table:GenError}. The general error is 0 for case 1, as already discussed. Case 4 shows a much higher absolute error as the function has a multiplicative factor of 16, leading to higher function values. 
+
+\begin{table}[h]
+\centering
+\label{table:GenError}
+\caption{The resulting general error for cases 1-4 for verification of components}
+\vspace{1em}
+\begin{tabular}{| c | c | c |}
 \hline
  Test Case Number & Function &  General Error\\
  \hline
@@ -169,8 +175,8 @@ In every case, the figures showing the difference are compiled in figure \ref{fi
  \hline
  4 & $f(x)=16 \cdot x(1-x)y(1-y)$ & 6.8906 \\
  \hline
- \end{tabular}
-\end{center}
+\end{tabular}
+\end{table}
 
 \section{Results of local refinement (spatial adaptivity)}
 Based on the the fact that the current method has been verified, next two different cases are checked for local refinement -- one simply to ensure the proper functionality of the implementation of recursive tree,  and second for the test cases presented above. 
@@ -226,7 +232,7 @@ As explained earlier, the objective here is to come up with a valid test case fo
 As seen in figure \ref{fig:PredefError}, the solution to this case matches the expectations. Based on this result, the final evaluation is performed in the next section.
 
 \subsection{Error indicator based on solution of combination technique}
-After verification of the code in both adaptive and non-adaptive cases, the next focus is on further investigation into the actual problem at hand, which is performing the adaptation in correspondence with the local error of solution in each node or subtree. For that, an error indicator has been introduced which compares the solution to the full grid method. The primary reason for defining some extra test cases in the verification part was that to be able to observe how the local refinement works with different cases, otherwise there is much similarity between case 2, 3 and 4. The results are visualized in figures \ref{fig:AdaptiveCase2}, \ref{fig:AdaptiveCase3} and \ref{fig:AdaptiveCase4} for cases 2,3 and 4, respectively.\\
+After verification of the code in both adaptive and non-adaptive cases, the next focus is on further investigation into the actual problem at hand, which is performing the adaptation in correspondence with the local error of solution in each node or subtree. For that, an error indicator has been introduced which compares the solution to the full grid method. The primary reason for defining some extra test cases in the verification part was that to be able to observe how the local refinement works with different cases, otherwise there is much similarity between case 2, 3 and 4. The results are visualized in figures \ref{fig:AdaptiveCase2}, \ref{fig:AdaptiveCase3} and \ref{fig:AdaptiveCase4} for cases 2,3 and 4, respectively. \\
 
 
 %4adaptive case 2: before refinement and after refinement together 
@@ -315,9 +321,13 @@ The reason for these two scheme is that the results should be separated and base
 	\centering
 	    \includegraphics[width =\textwidth]{/results/5/Error-Threshod.png}
 		\centering    
-	 \caption{Error-Threshod}
+	 \caption{Error-Threshold}
        \label{fig:ErrorThreshod}
 \end{figure}
+
+As expected, the logarithmic error in both cases decreases with an increase in the level of mesh refinement and becomes constant after one point. It highlights the fact that the mesh independence is achieved in both cases and the results are free from the effect of the mesh refinement. Comparison of figures \ref{fig:ErrorRefinementLevel} and \ref{fig:ErrorThreshod} for case 2 shows much higher error in the threshold-independent approach and a significantly lower error in the refinement-constant approach. The reason is due to the specific definition of the function, in which only a small subsection is relevant for mesh-refinement. As the threshold-independent approach is unable to focus on a specific subsection, the resulting error is higher by a factor of 10 compared to the refinement-constant approach.
+
+
 
 
 

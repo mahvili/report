@@ -203,13 +203,18 @@ where $\chi^{I}$ is the characteristic function of I and is expressed as follows
 \end{equation}
 
 \section{Combination Technique}
-Another motivation for sparse grids is to represent any sparse grid function as a linear combination of its interpolants on the regular full grids. This requires us to seek a certain linear combination of full grid spaces to create a sparse grid space. This approach do away with the need for more complicated data structures than a few arrays to store a sparse grid function and requires only regular data structures.\cite{Griebel1992b} \\
-The crux of the combination technique is similar to the multilevel splitting of the finite element spaces which changes the nodal bases of the space with hierarchical bases. \cite{Yserentant1986}
-The basis for combination techniques comes from the liner combination of independent solution of many problems with reduced size. \cite{Griebel1992}\\
+Another motivation for sparse grids is to represent any sparse grid function as a linear combination of its interpolants on the regular full grids. This requires us to seek a certain linear combination of full grid spaces to create a sparse grid space. This approach do away with the need for data structures more complicated than a few arrays to store a sparse grid function and requires only regular data structures.\cite{Griebel1992b} \\
+The crux of the combination technique is similar to the multilevel splitting of the finite element spaces which changes the nodal bases of the space with hierarchical bases. \cite{Yserentant1986} The basis for combination techniques comes from the liner combination of independent solution of many problems with reduced size. \cite{Griebel1992}. Figure \ref{fig:Sparsegrid} shows an example of this multilevel combination which is basically addition and subtraction in this special case.
+
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.6\textwidth]{/SparseGrid.pdf}
+			\caption{Classical sparse grid combination method for l=4}
+			\label{fig:Sparsegrid}
+		\end{figure}
 
 In total combination technique involves $O({h}^{-1}_nlog({h}^{-1}_n))$  unknowns in contrast to $O({h}^{-2}_n) $ unknowns for the conventional full grid approach however combination solution is nearly as accurate as the standard solution. it can be proven that error is only slightly worse than for the associated full grid.\cite{Griebel1992a, Griebel1992b}. To some extent the combination technique even works for non-smooth solutions. Now, ${h}^2_i$ and ${h}^2_j$ in have to be replaced by ${h}^\alpha_i$ , ${h}^\beta_j$ with appropriate $\alpha$ and $\beta$, but because of the properties of the combination technique the leading error terms still cancel. However, for the problems with severe singularities, the appropriate combination of adaptively refined grids is recommended.\cite{Griebel1992a}\\ It is seen that in some situations the combination technique leads to the cancellation of certain error terms in the asymptotic error expansion\cite{Griebel1992b} \\
-
-Finally some general important points and remarks will be discussed. These remarks will show the important factors at play in these kind of problems and maybe give insight for future work.
+ Lastly, one should note that the error analysis of this method has been relatively explained in \cite{Garcke2013} and the references there within. For further details please check the chapters of related works under "Works on Error Analysis and Convergence" presented earlier in the thesis. The discussion of these analysis is out of scope for this thesis but perhaps relatively important in future works.
 %
 %\section{Some General Discussions and Points}
 %1. The resulting algorithm can be used as a solver and within a preconditioner. it can also be applied as a preconditioner for the full grid problem to speed up a basic iterative solver. \cite{Griebel1992} \\

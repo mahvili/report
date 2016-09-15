@@ -10,45 +10,45 @@ Warning--empty publisher in Garcke2007a
 Warning--there's a number but no volume in Ebeida2010
 Warning--empty publisher in Heene2014
 Warning--can't use both volume and number fields in delvos1989boolean
-You've used 43 entries,
+You've used 44 entries,
             2146 wiz_defined-function locations,
-            813 strings with 11872 characters,
-and the built_in function-call counts, 17124 in all, are:
-= -- 1766
-> -- 737
+            817 strings with 12000 characters,
+and the built_in function-call counts, 17465 in all, are:
+= -- 1796
+> -- 762
 < -- 21
-+ -- 282
-- -- 239
-* -- 1203
-:= -- 2856
-add.period$ -- 141
-call.type$ -- 43
-change.case$ -- 222
++ -- 292
+- -- 248
+* -- 1225
+:= -- 2919
+add.period$ -- 144
+call.type$ -- 44
+change.case$ -- 229
 chr.to.int$ -- 0
-cite$ -- 50
-duplicate$ -- 652
-empty$ -- 1309
-format.name$ -- 239
-if$ -- 3584
+cite$ -- 51
+duplicate$ -- 664
+empty$ -- 1331
+format.name$ -- 248
+if$ -- 3651
 int.to.chr$ -- 0
-int.to.str$ -- 43
-missing$ -- 44
-newline$ -- 218
-num.names$ -- 137
-pop$ -- 252
+int.to.str$ -- 44
+missing$ -- 46
+newline$ -- 223
+num.names$ -- 140
+pop$ -- 265
 preamble$ -- 1
-purify$ -- 180
+purify$ -- 187
 quote$ -- 0
-skip$ -- 510
+skip$ -- 517
 stack$ -- 0
-substring$ -- 1254
-swap$ -- 180
+substring$ -- 1259
+swap$ -- 181
 text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 170
+type$ -- 172
 warning$ -- 7
-while$ -- 225
-width$ -- 45
-write$ -- 493
+while$ -- 228
+width$ -- 46
+write$ -- 503
 (There were 7 warnings)

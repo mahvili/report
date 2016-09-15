@@ -267,4 +267,9 @@ Martin Buhmann, F.-J. Delvos, and Walter Schempp.
   volume~74.
 \newblock Longman Scientific and Technical, oct 1990.
 
+\bibitem{goodrich2007data}
+Michael Goodrich, Roberto Tamassia, and David Mount.
+\newblock {\em DATA STRUCTURES AND ALOGORITHMS IN C++}.
+\newblock John Wiley \& Sons, 2007.
+
 \end{thebibliography}

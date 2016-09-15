@@ -2,56 +2,23 @@
 \label{chapter:results}
 
 \section{Conclusion}
-This thesis investigated a new algorithmic approach using sparse grids and combination technique for solving ----- type of problems. It is advantageous in terms of its robustness and the independence of speed of convergence from the regular properties considered in boundary value problem. The approach is also suitable for parallelization due to its inherent coarse grain nature.\\
+This thesis investigated a new adaptive algorithmic approach using sparse grids and combination technique for solving interpolation types of problems. It is advantageous in terms of its robustness less floating point operations(FLOPs). The approach is also suitable for parallelization inherently separation of the problem to independant subproblems. Focused on reaching same order of grid points and memory use as conventional combination methods the approach tries to achieve better accuracy by faster adapting to region with higher order of error by starting from much coarser grid.\\
 
---- verify that our implementation works as expected. This has been done by comparison of the solution to normal full grid problem
-
---- following test cases with different functions
- to ensure the functionality under a variety of cases.
+Several test functions as listed below verify that our implementation works as expected compared to high resolution full grid without adaptation and thus validated  to ensure the functionality under a variety of cases.
 \begin{enumerate}
 \item $f(x)=x^2+y^2$
 \item $f(x)=x^2 \cdot y^2 $
 \item $f(x)=\sqrt[2]{x} \cdot \sqrt[2]{y}$
 \item $f(x)=16 \cdot x(1-x)y(1-y)$
 \end{enumerate}
-
--- try to compare the error of combination technique, given the default scheme of $\overrightarrow{l}=(4,4)$.\\
-
---Since the bilinear interpolation is used in this case, figure shows that the combination technique gives the perfect solution.
-
---it can be observe that interpolation of a function which is not of terms $x^even \cdot y^even$ gives no error.
-
------ Results of local refinement
-
---next two different cases are checked for local refinement
---enforce a predefined error to the problem by defining an error function which is higher than our threshold for certain regions
---the solution to this case matches the expectations
-
-----Error indicator based on solution of combination technique
---performing the adaptation in correspondence with the local error of solution in each node or subtree ; actual problem at hand
-
--- an error indicator has been introduced which compares the solution to the full grid method
-
---multiple refinement levels performed in a loop/recursive way and then check how the total error acts
---logarithmic behavior
-
-
--- To examine the independent effect of the two key factors,  threshold for the error and the level of refinement, two approaches are evaluated
+The default scheme of $\overrightarrow{l}=(4,4)$ for all the nodes of the tree including the root is assumed. In case the test function is not of hyperbolic form with respect to two dimension the bilinear interpolation used in combination technique gives the perfect solution. Simulations are run to observe the error for the local mesh refinement for two independent cases. The error accuracy is observed to be better than full grid mesh refinement. Test cases are also prepared in order to observe the mesh refinement when a predefined error function is enforced to the problem. Besides the predefined error, a simulation based error indicator for local grid has been investigated. The error accuracy is observed to be atleast as effective as the full grid mesh refinement. Under changing levels of refinement in a loop the logarithmic behavior of error as expected form the literature is observed for the solution suggested.\\
+To examine the independent effect of the two key factors, threshold for the error and the level of refinement, two approaches are evaluated.
 \begin{enumerate}
 \item Threshold independent, refinement level changing.
 \item Threshold changing, refinement level constant.
 \end{enumerate}
-
--- the logarithmic error in both cases decreases with an increase in the level of mesh refinement and becomes constant after one point.
-
---  case 2 shows much higher error in the threshold-independent approach than the refinement-constant approach due to the definition of the function, in which error in concentrated in one subsection
-
-Overall, the conclusion is that the approach works. Has been validated. Is promising for future research. It works very well in ---- cases and not well in ---- cases.
-
+The logarithmic error in both cases with an increase of that factor and thus level of refinement becomes saturated after one point since we there is no further refinement. Two different cases are different because one makes the height of the tree to be higher in some local part and the other one ensures that in each level we reach an expected local error. Test case 2 shows much higher error in the threshold-independent approach than the refinement-constant approach due to the definition of the function, in which error in concentrated in one subsection.\\
+Overall, the conclusion is that the approach works as expected under different circumstances and while it has been validated for both adaptive and non-adaptive versions it shows the application of this method will be promising for future research and maybe a baseline for prospective scientist. Although It had worked for the cases presented but the author believes certain functions with higher derivatives or with singularities can bring some problems as one first need to detect the errors on the grid position. Therefore, If the variation of the function is inside the blocks basically this method will not work.
 
 \section{Suggestions for future works}
-- A detailed investigation of using lower resolution schemes for lower subtree problems can possibly show better result for storage space and memory usage.
-
---  try the approach on more complicated  and a variety of cases to better understand the strengths and weaknesses of this approach(?)
-
--- Extension to real-worl problems(?)
+As described earlier the interpolation problem is just a baseline for the adaptive mesh refinement combination technique. However, usually problems which has been tackled extensively in relevant literature e.g. regression and partial differential equation problem require higher complexity. This is becasue the numerical operations there are much more complex as they can be even non-linear in format. Thus definition of error indicator in such problems might be tricky but once we can achieve that we can investigate whether the current method can be applied there. 

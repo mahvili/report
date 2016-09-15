@@ -160,7 +160,7 @@ A simple visual represention of result from a python script called "exahd-teachl
 	\begin{figure}
 			\centering
 			\includegraphics[width=0.6\textwidth]{/SparseGrid4.png}
-			\caption{Classical sparse grid combination method for l=4}
+			\caption{Classical sparse grid for l=4}
 			\label{fig:Sparsegrid4}
 		\end{figure}
 
@@ -210,7 +210,6 @@ where $\chi^{I}$ is the characteristic function of I and is expressed as follows
      \end{cases}
 \end{equation}
 
-\section{Combination Technique}
 Another motivation for sparse grids is to represent any sparse grid function as a linear combination of its interpolants on the regular full grids. This requires us to seek a certain linear combination of full grid spaces to create a sparse grid space. This approach do away with the need for data structures more complicated than a few arrays to store a sparse grid function and requires only regular data structures.\cite{Griebel1992b} \\
 The crux of the combination technique is similar to the multilevel splitting of the finite element spaces which changes the nodal bases of the space with hierarchical bases. \cite{Yserentant1986} The basis for combination techniques comes from the liner combination of independent solution of many problems with reduced size. \cite{Griebel1992}. Figure \ref{fig:Sparsegrid} shows an example of this multilevel combination which is basically addition and subtraction in this special case.\\
 

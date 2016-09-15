@@ -6,7 +6,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Nodal and hierarchical basis of level $n=3$. \relax }}{17}{figure.caption.12}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Classical sparse grid combination method for l=4\relax }}{19}{figure.caption.13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Classical sparse grid for l=4\relax }}{19}{figure.caption.13}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Classical sparse grid combination method for l=4\relax }}{20}{figure.caption.14}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Tree representing a portion of a file system\relax }}{26}{figure.caption.15}
@@ -16,19 +16,20 @@
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Quad tree representation\relax }}{29}{figure.caption.19}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Example of main scheme\relax }}{30}{figure.caption.20}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces The linked structure for a general tree: (a) the node structure; (b) the portion of the data structure associated with a node and its children.\relax }}{32}{figure.caption.21}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces (a) Combination and (b) verification for case 1\relax }}{33}{figure.caption.22}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces (a) Combination and (b) verification for case 2\relax }}{34}{figure.caption.23}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces (a) Combination and (b) verification for case 3\relax }}{34}{figure.caption.24}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces (a) Combination and (b) verification for case 4\relax }}{35}{figure.caption.25}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Difference case 1-4\relax }}{35}{figure.caption.26}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces (a) Used square domain for the adaptive combination technique computation, (b) Sample rectangular domain\relax }}{32}{figure.caption.21}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Results for (a) combination and (b) verification of components for case 1\relax }}{33}{figure.caption.22}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Results for (a) combination and (b) verification of components for case 2\relax }}{34}{figure.caption.23}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Results for (a) combination and (b) verification of components for case 3\relax }}{34}{figure.caption.24}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Results for (a) combination and (b) verification of components for case 4\relax }}{35}{figure.caption.25}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Results for combination techniques for cases 1-4\relax }}{35}{figure.caption.26}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Quad tree representation\relax }}{36}{figure.caption.28}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Predefined\relax }}{38}{figure.caption.29}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Predefined error\relax }}{39}{figure.caption.30}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Case 2 before and after refinement\relax }}{39}{figure.caption.31}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Case 3 before and after refinement\relax }}{40}{figure.caption.32}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Case 4 before and after refinement\relax }}{40}{figure.caption.33}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Error-RefinementLevel\relax }}{41}{figure.caption.34}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Error-Threshold\relax }}{41}{figure.caption.35}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Visualisation of the quad tree\relax }}{36}{figure.caption.29}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Meshing for a predefined refinement using the shown quad tree\relax }}{37}{figure.caption.30}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Predefined error function user for function evaluation\relax }}{38}{figure.caption.31}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Comparison of the error values for case 2 (a) before and (b) after refinement\relax }}{39}{figure.caption.32}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Comparison of the error values for case 3 (a) before and (b) after refinement\relax }}{39}{figure.caption.33}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Comparison of the error values for case 4 (a) before and (b) after refinement\relax }}{39}{figure.caption.34}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Logarithmic visualization of the error values for the threshold independent, refinement level changing approach for cases 2 to 4\relax }}{40}{figure.caption.35}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Logarithmic visualization of the error values for the threshold changing, refinement level constant approach for cases 2 to 4\relax }}{40}{figure.caption.36}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

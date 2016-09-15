@@ -1,6 +1,536 @@
 \chapter{Appendix}
 %\section{Detailed Validation Results}
 \label{chapter:DetailedDescriptions}
-Here come the details that are not supposed to be in the regular text.
+
 \section{Source Code}
+ \lstset{language=C++}
+\begin{lstlisting}[caption= Source code for adaptive combination technique, label=code:combi]
+#ifndef COMBINATION_H
+#define COMBINATION_H
+
+#include "Fullgrid.h"
+#include <stdio.h>
+
+class Combination {
+private:
+	/*private member variable and function definitions. */
+
+protected:
+	/*protected member variable and function definitions. */
+
+
+public:
+	/*public member variable and function definitions. */
+	Fullgrid _grid_l1 , _grid_l2 , _grid_lmin;
+	Fullgrid _grid_l1_interpolated , _grid_l2_interpolated , _grid_lmin_interpolated;
+	Fullgrid _grid_combination;
+	int level_max[DIMENSION],level_min[DIMENSION];
+	int _Npoints[DIMENSION];
+
+	/** Constructor for the Combination */
+	Combination(int* level_1,int* level_2,int* _level_max, int* _level_min, Domain domain)
+	:_grid_l1(level_1, domain),_grid_l2(level_2, domain),_grid_lmin(_level_min, domain)
+	,_grid_l1_interpolated(_level_max, domain),_grid_l2_interpolated(_level_max, domain)
+	,_grid_lmin_interpolated(_level_max, domain),_grid_combination(_level_max, domain){
+
+		for ( int i = 0; i < DIMENSION; ++i ) {
+			level_max[i]=_level_max[i];
+			level_min[i]=_level_min[i];
+		}
+		//evaluate case function for each grids needed to be combined
+		_grid_l1.evaluate(domain);
+		_grid_l2.evaluate(domain);
+		_grid_lmin.evaluate(domain);
+
+	}
+
+	/** Destructor Deallocates the data
+	 * TASK
+	 *  */
+	virtual ~Combination() {
+		//delete[] ;
+	}
+
+	void GetCombination(int* level_1,int* level_2, Domain domain){
+		/*apply the method iterate*/
+		for ( int i = 0; i < DIMENSION; ++i ) {
+			_Npoints[i]=(pow(2,level_max[i]))+1;	//2^l+1
+		}
+		direct_injection(level_1,_grid_l1,domain,&_grid_l1_interpolated);
+		direct_injection(level_2,_grid_l2,domain,&_grid_l2_interpolated);
+		direct_injection(level_min,_grid_lmin,domain,&_grid_lmin_interpolated);
+
+		interpolation(level_1,&_grid_l1_interpolated, domain);
+		interpolation(level_2,&_grid_l2_interpolated, domain);
+		interpolation(level_min,&_grid_lmin_interpolated, domain);
+
+		for ( int i = 0; i < _Npoints[0]; ++i ) {
+			for ( int j = 0; j < _Npoints[1]; ++j ) {
+				_grid_combination.function_values[i][j]= _grid_l1_interpolated.function_values[i][j] + _grid_l2_interpolated.function_values[i][j] - _grid_lmin_interpolated.function_values[i][j];
+			}
+		}
+
+	}
+
+	void interpolation(int* level, Fullgrid* interpolated_grid, Domain domain){
+
+		int lower_local_index[DIMENSION], upper_local_index[DIMENSION];
+		//interploation in X direction
+		for ( int i = 0; i < _Npoints[0]-1; ++i ) {
+			for ( int j = 0; j < _Npoints[1]; ++j ) {
+				lower_local_index[0]=(int) floor( i/( pow( 2,level_max[0]-level[0] ) ) ) ;
+				upper_local_index[0]=lower_local_index[0]+1;
+				interpolated_grid->function_values[i][j]= ((double) ( upper_local_index[0] * ( pow( 2,level_max[0]-level[0] ) ) - i))/((double) ( pow( 2,level_max[0]-level[0] ) )) * interpolated_grid->function_values[(int) (lower_local_index[0]* pow( 2,level_max[0]-level[0] ) )][j]+ ((double) ( i - lower_local_index[0] * ( pow( 2,level_max[0]-level[0] ) ) ))/((double) ( pow( 2,level_max[0]-level[0] ) )) * interpolated_grid->function_values[(int) (upper_local_index[0]*pow( 2,level_max[0]-level[0] ))][j];
+			}
+		}
+		//interploation in Y direction
+		for ( int i = 0; i < _Npoints[0]; ++i ) {
+			for ( int j = 0; j < _Npoints[1]-1; ++j ) {
+				lower_local_index[1]=(int) floor( j/( pow( 2,level_max[1]-level[1] ) ) );
+				upper_local_index[1]=lower_local_index[1]+1;
+				interpolated_grid->function_values[i][j]= ((double) ( upper_local_index[1] * ( pow( 2,level_max[1]-level[1] ) ) - j))/((double) ( pow( 2,level_max[1]-level[1] ) )) * interpolated_grid->function_values[i][(int) (lower_local_index[1]*pow( 2,level_max[1]-level[1] ))]+ ((double) ( j - lower_local_index[1] * ( pow( 2,level_max[1]-level[1] ) ) ))/((double) ( pow( 2,level_max[1]-level[1] ) )) * interpolated_grid->function_values[i][(int) (upper_local_index[1]*pow( 2,level_max[1]-level[1] ))];
+			}
+		}
+
+	}
+
+	void direct_injection(int* level, Fullgrid _grid, Domain domain, Fullgrid* _projected_grid){
+
+		// Initialize to zero
+		for ( int i = 0; i < _Npoints[0]; ++i ) {
+			for ( int j = 0; j < _Npoints[1]; ++j ) {
+				_projected_grid->function_values[i][j]= 0;
+			}
+		}
+
+		//for all local values we directly project to global
+		int _Npoints_local[DIMENSION];
+		for ( int i = 0; i < DIMENSION; ++i ) {
+			_Npoints_local[i]=(pow(2,level[i]))+1;	//2^l+1
+		}
+
+		for ( int i = 0; i < _Npoints_local[0]; ++i ) {
+			for ( int j = 0; j < _Npoints_local[1]; ++j ) {
+				_projected_grid->function_values[ (int) (i*pow( 2,level_max[0]-level[0] ))][ (int) (j*pow( 2,level_max[1]-level[1] )) ]= _grid.function_values[i][j];
+			}
+		}
+	}
+
+};
+
+#endif
+\end{lstlisting}
+
+ \lstset{language=C++}
+\begin{lstlisting}[caption= Source code for Full grid method, label=code:fullG]
+#ifndef FULLGRID_H
+#define FULLGRID_H
+
+#include "Definitions.h"
+/*here Full grid structure will be build*/
+
+class Fullgrid {
+public:
+	/*public member variable and function definitions. */
+	int _Npoints[DIMENSION];
+	double _mesh_size[DIMENSION];
+	double** function_values;
+	double *position_d1, *position_d2;
+
+	/** Default constructor for the fullgrid
+	 */
+	Fullgrid(int* level, Domain _domain) {
+		for ( int i = 0; i < DIMENSION; ++i ) {
+			_Npoints[i]=(pow(2,level[i]))+1;	//2^l+1
+			_mesh_size[i]= (_domain.end_point[i] - _domain.start_point[i]) / (pow(2,level[i]) );	//2^-l
+		}
+		position_d1 = new double[ _Npoints[0] ];
+		position_d2 = new double[ _Npoints[1] ];
+		//Assign first dimension
+		function_values = new double*[_Npoints[0]];
+		//Assign second dimension
+		for(int i = 0; i <_Npoints[0] ; i++){
+			function_values[i] = new double[_Npoints[1]];
+		}
+	}
+
+	//copy constructor
+	Fullgrid(const Fullgrid& _copyfromfullgrid) {
+		for ( int i = 0; i < DIMENSION; ++i ) {
+			_Npoints[i]=_copyfromfullgrid._Npoints[i];	//2^l+1
+			_mesh_size[i]= _copyfromfullgrid._mesh_size[i];
+		}
+		position_d1 = new double[ _Npoints[0] ];
+		position_d2 = new double[ _Npoints[1] ];
+		function_values = new double*[_Npoints[0]];
+		for(int i = 0; i <_Npoints[0] ; i++){
+			function_values[i] = new double[_Npoints[1]];
+		}
+		for ( int j_1 = 0; j_1 < _Npoints[0]; ++j_1 ) {
+			position_d1[j_1]=_copyfromfullgrid.position_d1[j_1];
+		}
+		for ( int j_2 = 0; j_2 < _Npoints[1]; ++j_2 ) {
+			position_d2[j_2]=_copyfromfullgrid.position_d2[j_2];
+		}
+		//		**(_array) = new double[index_size_global]();  ///Zero-initialize (somehow doesn't work here)
+		for ( int i = 0; i < _Npoints[0]; ++i ) {
+			for ( int j = 0; j < _Npoints[1]; ++j ) {
+				function_values[i][j]= _copyfromfullgrid.function_values[i][j];  //X^2*Y^2 - TASK (implement new function to do here)
+			}
+		}
+
+	}
+
+	//Assignment operator
+	Fullgrid& operator=(const Fullgrid& _equalfullgrid){
+		if (this!=&_equalfullgrid){
+			for ( int i = 0; i < DIMENSION; ++i ) {
+				_Npoints[i]=_equalfullgrid._Npoints[i];	//2^l+1
+				_mesh_size[i]= _equalfullgrid._mesh_size[i];
+			}
+			position_d1 = new double[ _Npoints[0] ];
+			position_d2 = new double[ _Npoints[1] ];
+			function_values = new double*[_Npoints[0]];
+			//Assign second dimension
+			for(int i = 0; i <_Npoints[0] ; i++){
+				function_values[i] = new double[_Npoints[1]];
+			}
+
+			for ( int j_1 = 0; j_1 < _Npoints[0]; ++j_1 ) {
+				position_d1[j_1]=_equalfullgrid.position_d1[j_1];
+			}
+			for ( int j_2 = 0; j_2 < _Npoints[1]; ++j_2 ) {
+				position_d2[j_2]=_equalfullgrid.position_d2[j_2];
+			}
+			//		**(_array) = new double[index_size_global]();  ///Zero-initialize (somehow doesn't work here)
+			for ( int i = 0; i < _Npoints[0]; ++i ) {
+				for ( int j = 0; j < _Npoints[1]; ++j ) {
+					function_values[i][j]= _equalfullgrid.function_values[i][j];  //X^2*Y^2 - TASK (implement new function to do here)
+				}
+			}
+		}
+		return *this;
+	}
+
+	/** Destructor Deallocates the data
+	 * TASK
+	 */
+	virtual ~Fullgrid() {
+		delete[] function_values;
+		delete[] position_d1;
+		delete[] position_d2;
+	}
+
+	/*evaluates function value for TestFunction defined in definitions*/
+	void evaluate(Domain _domain){
+
+		for ( int j_1 = 0; j_1 < _Npoints[0]; ++j_1 ) {
+			position_d1[j_1]=_domain.start_point[0]+j_1*_mesh_size[0];
+		}
+		for ( int j_2 = 0; j_2 < _Npoints[1]; ++j_2 ) {
+			position_d2[j_2]=_domain.start_point[1]+j_2*_mesh_size[1];
+		}
+		//		**(_array) = new double[index_size_global]();  ///Zero-initialize (somehow doesn't work here)
+		for ( int i = 0; i < _Npoints[0]; ++i ) {
+			for ( int j = 0; j < _Npoints[1]; ++j ) {
+				function_values[i][j]= TestFunction(position_d1[i],position_d2[j]);  //X^2*Y^2 - TASK (implement new function to do here)
+			}
+		}
+	}
+
+
+
+	/** notice: by introducing domain it may need to change accordingly by adding level of domain
+	by putting level_max it will give the index for full grid
+	 */
+	/** here a multidimensional indices which is stored in 1D array called "index" is mapped to a value to use in grid
+	 *  TASK
+	 */
+	/**
+	int Map2arrayIndex_local(int * index, int*level)  {
+		int multiplier=1,mapped_index=0;
+		for loop over dimensions to get to index
+		for ( int i = 0; i < DIMENSION; ++i ) {
+			_Npoints[i]=(pow(2,level[i]))+1;	//2^l+1
+			if (i>0){
+				multiplier*=_Npoints[i-1];
+			}
+			mapped_index+=index[i]*multiplier;
+		}
+		return mapped_index;
+	}
+	 */
+private:
+
+};
+
+#endif
+
+\end{lstlisting}
+
+ \lstset{language=C++}
+\begin{lstlisting}[caption= Source code for quad trees, label=code:quad]
+#ifndef QUADTREE_H
+#define QUADTREE_H
+
+#include "Definitions.h"
+#include "Combination.h"
+#include "Visual.h"
+#include <math.h>
+
+class Node{
+public:
+	bool refined_factor; //whether the node should be refined or not 0=no refinement 1=to be refined
+	double total_error_in_node; //total error calculated in the subtree
+	double total_error_in_node_using_predefined_function; //
+	int node_level;
+	string name;
+	Domain domain;
+
+
+	Fullgrid* beforecombi_fullgrid;
+	Fullgrid* aftercombi_fullgrid;
+	Fullgrid* difference_grid;
+
+	Node* parent_node;
+	Node* NW_child_node;
+	Node* NE_child_node;
+	Node* SE_child_node;
+	Node* SW_child_node;
+
+
+	//constructor
+	Node(): parent_node(NULL),NW_child_node(NULL),NE_child_node(NULL),SE_child_node(NULL),SW_child_node(NULL){};
+
+};
+
+
+#endif
+\end{lstlisting}
+
+ \lstset{language=C++}
+\begin{lstlisting}[caption= Source code for solution, label=code:sol]
+#ifndef SOLUTION_H
+#define SOLUTION_H
+
+#include "QuadTree.h"
+#include "Definitions.h"
+#include "Combination.h"
+#include "Visual.h"
+#include <math.h>
+#include <iostream>
+using namespace std;
+
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+bool solve(Node* current_node);
+
+void expand_Quad(Node* current_node);
+
+double evaluate_predefinedError(Domain new_domain);
+
+void AdaptiveRefinement(Node* current_node);
+
+bool solve(Node* current_node){
+
+	current_node->beforecombi_fullgrid	= new Fullgrid(level_max, current_node->domain);
+	current_node->aftercombi_fullgrid	= new Fullgrid(level_max, current_node->domain);
+	current_node->difference_grid		= new Fullgrid(level_max, current_node->domain);
+
+	current_node->beforecombi_fullgrid->evaluate(current_node->domain);
+
+	Combination* _combinationSolution= new Combination(level_1,level_2,level_max,level_min,current_node->domain);
+	_combinationSolution->GetCombination(level_1,level_2, current_node->domain);
+	current_node->aftercombi_fullgrid=&_combinationSolution->_grid_combination;
+
+	//**************************Calculation of difference value between sparse grid combination and normal full grid and computing total error of the node
+	current_node->total_error_in_node=0;
+	for ( int i = 0; i < _Npoints[0]; ++i ) {
+		for ( int j = 0; j < _Npoints[1]; ++j ) {
+			current_node->difference_grid->function_values[i][j]= current_node->beforecombi_fullgrid->function_values[i][j] - current_node->aftercombi_fullgrid->function_values[i][j];
+			if (current_node->difference_grid->function_values[i][j]<0){
+				current_node->total_error_in_node-=current_node->difference_grid->function_values[i][j];//if it's negative then make it positive and add (sum + absolute(x)) = sum - x
+			}
+			else{
+				current_node->total_error_in_node+=current_node->difference_grid->function_values[i][j];//if it's positive then just add (sum + absolute(x)) = sum + x
+			}
+
+		}
+	}
+	//**************************
+	if (USE_PREDEFINED_ERROR==0){ //if we use predefined then we don't use the error calculated
+		if (current_node->total_error_in_node>TRESHOLD_ERROR && current_node->node_level<MAX_ADAPTATION_LEVEL){   //if error is not satisfied or we didn't go too far then make a new refinement
+			current_node->refined_factor=1;
+		}
+		else {
+			current_node->refined_factor=0;
+		}
+	}
+	else if (USE_PREDEFINED_ERROR==1){
+		current_node->total_error_in_node_using_predefined_function = evaluate_predefinedError(current_node->domain);
+		if (current_node->total_error_in_node_using_predefined_function>TRESHOLD_ERROR && current_node->node_level<MAX_ADAPTATION_LEVEL){   //if error is not satisfied or we didn't go too far then make a new refinement
+			current_node->refined_factor=1;
+		}
+		else {
+			current_node->refined_factor=0;
+		}
+	}
+
+
+	//if only we need refining then we draw that branch
+
+
+	if (current_node->refined_factor==0){
+		if (WRITE_VTK==1){
+			struct stat st_results = {0};
+			if (stat("Results", &st_results) == -1) {
+				mkdir("Results", 0700);
+			}
+			//vtk with subdirectory for no combination
+			struct stat st_nocombi = {0};
+			if (stat("Results/no_combination", &st_nocombi) == -1) {
+				mkdir("Results/no_combination", 0700);
+			}
+			string fullgrid_name="./Results/no_combination/noCombi"  + std::to_string(current_node->node_level) +  current_node->name;
+			const char *cfullgrid_name = fullgrid_name.c_str();
+			write_vtkFile(cfullgrid_name,current_node->domain,current_node->beforecombi_fullgrid);
+			//vtk with subdirectory for combination
+			struct stat st_combi = {0};
+			if (stat("Results/combination", &st_combi) == -1) {
+				mkdir("Results/combination", 0700);
+			}
+			string combigrid_name="./Results/combination/Combi"  + std::to_string(current_node->node_level) +  current_node->name;
+			const char *ccombigrid_name = combigrid_name.c_str();
+			write_vtkFile(ccombigrid_name,current_node->domain,current_node->aftercombi_fullgrid);
+			//vtk with subdirectory for no combination
+			struct stat st_diff = {0};
+			if (stat("Results/difference_grid", &st_diff) == -1) {
+				mkdir("Results/difference_grid", 0700);
+			}
+			string diffgrid_name="./Results/difference_grid/difference" + std::to_string(current_node->node_level) + current_node->name;
+			const char *cdiffgrid_name = diffgrid_name.c_str();
+			write_vtkFile(cdiffgrid_name,current_node->domain,current_node->difference_grid);
+		}
+	}
+
+	return current_node->refined_factor;
+}
+
+void expand_Quad(Node* current_node){
+
+	//making this node parent of all children
+	current_node->SW_child_node = new Node();
+	current_node->SE_child_node = new Node();
+	current_node->NW_child_node = new Node();
+	current_node->NE_child_node = new Node();
+	current_node->SW_child_node->parent_node=current_node;
+	current_node->SE_child_node->parent_node=current_node;
+	current_node->NW_child_node->parent_node=current_node;
+	current_node->NE_child_node->parent_node=current_node;
+	//naming scheme
+	current_node->SW_child_node->name=current_node->name+"SW";
+	current_node->SE_child_node->name=current_node->name+"SE";
+	current_node->NW_child_node->name=current_node->name+"NW";
+	current_node->NE_child_node->name=current_node->name+"NE";
+	//Node level is added one time
+	current_node->SW_child_node->node_level=current_node->node_level+1;
+	current_node->SE_child_node->node_level=current_node->node_level+1;
+	current_node->NW_child_node->node_level=current_node->node_level+1;
+	current_node->NE_child_node->node_level=current_node->node_level+1;
+	//Setting new domains for all four children
+	//South West child
+	current_node->SW_child_node->domain.start_point[0] = current_node->domain.start_point[0];
+	current_node->SW_child_node->domain.start_point[1] = current_node->domain.start_point[1];
+	current_node->SW_child_node->domain.end_point[0]   = (current_node->domain.start_point[0]+current_node->domain.end_point[0])/2;
+	current_node->SW_child_node->domain.end_point[1]   = (current_node->domain.start_point[1]+current_node->domain.end_point[1])/2;
+	//South East child
+	current_node->SE_child_node->domain.start_point[0] = (current_node->domain.start_point[0]+current_node->domain.end_point[0])/2;
+	current_node->SE_child_node->domain.start_point[1] = current_node->domain.start_point[1];
+	current_node->SE_child_node->domain.end_point[0]   = current_node->domain.end_point[0];
+	current_node->SE_child_node->domain.end_point[1]   = (current_node->domain.start_point[1]+current_node->domain.end_point[1])/2;
+	//North West Child
+	current_node->NW_child_node->domain.start_point[0] = current_node->domain.start_point[0];
+	current_node->NW_child_node->domain.start_point[1] = (current_node->domain.start_point[1]+current_node->domain.end_point[1])/2;
+	current_node->NW_child_node->domain.end_point[0]   = (current_node->domain.start_point[0]+current_node->domain.end_point[0])/2;
+	current_node->NW_child_node->domain.end_point[1]   = current_node->domain.end_point[1];
+	//North East Child
+	current_node->NE_child_node->domain.start_point[0] = (current_node->domain.start_point[0]+current_node->domain.end_point[0])/2;
+	current_node->NE_child_node->domain.start_point[1] = (current_node->domain.start_point[1]+current_node->domain.end_point[1])/2;
+	current_node->NE_child_node->domain.end_point[0]   = current_node->domain.end_point[0];
+	current_node->NE_child_node->domain.end_point[1]   = current_node->domain.end_point[1];
+}
+
+double evaluate_predefinedError(Domain new_domain){
+	double _error=0;
+	//calculation of positions might be for no reason after evaluate function has been called once
+	int Ncell[DIMENSION];
+	double mesh_size_domain[DIMENSION];
+	double *cellposition_d1, *cellposition_d2;
+
+	for ( int i = 0; i < DIMENSION; ++i ) {
+		Ncell[i]=(pow(2,level_max[i]));	//2^l cell
+		mesh_size_domain[i]= (new_domain.end_point[i] - new_domain.start_point[i]) / (pow(2,level_max[i]) );	//2^-l
+	}
+	cellposition_d1 = new double[ Ncell[0] ];
+	cellposition_d2 = new double[ Ncell[1] ];
+
+	for ( int j_1 = 0; j_1 < Ncell[0]; ++j_1 ) {
+		cellposition_d1[j_1]=new_domain.start_point[0]+j_1*mesh_size_domain[0]+mesh_size_domain[0]/2.0;
+	}
+	for ( int j_2 = 0; j_2 < Ncell[1]; ++j_2 ) {
+		cellposition_d2[j_2]=new_domain.start_point[1]+j_2*mesh_size_domain[1]+mesh_size_domain[1]/2.0;
+	}
+	for ( int i = 0; i < _Npoints[0]; ++i ) {
+		for ( int j = 0; j < _Npoints[1]; ++j ) {
+			_error+= ErrorFunction(cellposition_d1[i],cellposition_d2[j]);  //X^2*Y^2 - TASK (implement new function to do here)
+		}
+	}
+	return _error;
+}
+
+void AdaptiveRefinement(Node* current_node){
+
+	current_node->refined_factor=solve(current_node);
+
+	if (current_node->refined_factor==1)
+	{
+		expand_Quad(current_node);
+
+		AdaptiveRefinement(current_node->SW_child_node);
+		AdaptiveRefinement(current_node->SE_child_node);
+		AdaptiveRefinement(current_node->NW_child_node);
+		AdaptiveRefinement(current_node->NE_child_node);
+	}
+
+}
+
+double compute_error(Node* current_node){
+	static int j=0;
+
+	double current_error=0;
+	if (current_node->refined_factor==0){
+		current_error+=current_node->total_error_in_node;
+		j++;
+		//cout<<"current one we are at j= "<< j <<" with name= "<<current_node->name<<endl;
+		//cout<<"total error in node was=" << current_node->total_error_in_node<<endl;
+		const char *temp = current_node->name.c_str();
+		if (USE_PREDEFINED_ERROR==1){printf ("total error predefined for %s =  %f\n",temp,current_node->total_error_in_node_using_predefined_function);	}
+
+	}
+	else if (current_node->refined_factor==1)
+	{
+		current_error+=compute_error(current_node->SW_child_node);
+		current_error+=compute_error(current_node->SE_child_node);
+		current_error+=compute_error(current_node->NW_child_node);
+		current_error+=compute_error(current_node->NE_child_node);
+	}
+
+	return current_error;
+}
+
+#endif
+
+\end{lstlisting}
 

@@ -20,17 +20,17 @@ Note that conventionally we are using the unit square domain as shown in figure 
     \begin{subfigure}[b]{0.49\textwidth}    
 	    \includegraphics[width =\textwidth]{/results/1/square.png}
 		\centering    
-	 \caption{}
+	 \caption{Square domain}
 	 \label{fig:results1Square}
     \end{subfigure} 
     \begin{subfigure}[b]{0.49\textwidth}
 	    \includegraphics[width =\textwidth]{/results/1/rectangle.png}
 	    %\vspace{3em}
 		\centering
-        \caption{}
+        \caption{Rectangular domain}
         \label{fig:results1Rect}
     \end{subfigure}     
-    \caption{The linked structure for a general tree: (a) the node structure; (b) the portion of the data structure associated with a node and its children.}
+    \caption{(a) Used square domain for the adaptive combination technique computation, (b) Sample rectangular domain}
     \label{fig:results1SquareRect}
 \end{figure}
 
@@ -61,7 +61,7 @@ In every case, the figures showing the difference are compiled in figure \ref{fi
 		 \caption{Verification}
 	    \label{fig:results2case1Full}	 
     \end{subfigure} 
-    \caption{(a) Combination and (b) verification for case 1}
+    \caption{Results for (a) combination and (b) verification of components for case 1}
     \label{fig:results2case1}
 \end{figure}
 %2figure case 2 verification difference, combigrid, fullgrid alll together
@@ -80,7 +80,7 @@ In every case, the figures showing the difference are compiled in figure \ref{fi
 	 \caption{Verification}
 	    \label{fig:results2case2Full}	 	 
     \end{subfigure} 
-    \caption{(a) Combination and (b) verification for case 2}
+    \caption{Results for (a) combination and (b) verification of components for case 2}
     \label{fig:results2case2}
 \end{figure}
 %2figure case 3 verification difference, combigrid, fullgrid alll together
@@ -99,7 +99,7 @@ In every case, the figures showing the difference are compiled in figure \ref{fi
 	 \caption{Verification}
 	    \label{fig:results2case3Full}	 	 
     \end{subfigure} 
-    \caption{(a) Combination and (b) verification for case 3}
+    \caption{Results for (a) combination and (b) verification of components for case 3}
     \label{fig:results2case3}
 \end{figure}
 %2figure case 4 verification difference, combigrid, fullgrid alll together
@@ -118,7 +118,7 @@ In every case, the figures showing the difference are compiled in figure \ref{fi
 	 \caption{Verification}
 	    \label{fig:results2case4Full}	 	 
     \end{subfigure} 
-    \caption{(a) Combination and (b) verification for case 4}
+    \caption{Results for (a) combination and (b) verification of components for case 4}
     \label{fig:results2case4}
 \end{figure}
 
@@ -151,7 +151,7 @@ In every case, the figures showing the difference are compiled in figure \ref{fi
 	 \caption{Case 4}
 	    \label{fig:results2case4Diff}	 	 
     \end{subfigure} 
-    \caption{Difference case 1-4}
+    \caption{Results for combination techniques for cases 1-4}
     \label{fig:results2case1-4Diff}
 \end{figure}
 
@@ -182,7 +182,7 @@ The absolute values of the general error for cases 1 to 4 are compiled in the ta
 Based on the the fact that the current method has been verified, next two different cases are checked for local refinement -- one simply to ensure the proper functionality of the implementation of recursive tree,  and second for the test cases presented above. 
 
 \subsection{Error indicator based on predefined error function}
-As explained earlier, the objective here is to come up with a valid test case for local refinement. Based on author's background in mesh generation, there is a technique specially for unstructured grid generation with background predefined function \cite{Henshaw1996} and adaptive grid generation algorithm\cite{Ebeida2010}. Motivated by ideas presented we will enforce a predefined error to the problem by defining an error function which is higher than our threshold for certain regions. This way we can predict the expected working of the local refinement exactly. For better clarity, the solution tree structure is presented in figure \ref{fig:QuadTreeRoot} and the predefined function with it's image on the unit square problem is presented in figure \ref{fig:Predef}.\\
+As explained earlier, the objective here is to come up with a valid test case for local refinement. Based on author's background in mesh generation, there is a technique specially for unstructured grid generation with background predefined function \cite{Henshaw1996} and adaptive grid generation algorithm\cite{Ebeida2010}. Motivated by ideas presented we will enforce a predefined error to the problem by defining an error function which is higher than our threshold for certain regions. This way we can predict the expected working of the local refinement exactly. For better clarity, the solution tree structure is presented in figure \ref{fig:QuadTreeRoot} and the predefined function with it's image on the unit square problem is presented in figures \ref{fig:QuadTreeSquare} and \ref{fig:PredefRefine}.\\
 
 % 3figure of tree from aastha
 % 3figure of predefined error from aastha
@@ -200,21 +200,23 @@ As explained earlier, the objective here is to come up with a valid test case fo
 		
 \begin{figure}[h]
 	\centering
-    \begin{subfigure}[b]{0.66\textwidth}    
-	    \includegraphics[width =\textwidth]{/results/3/QuadTreeSquare.pdf}
-		\centering    
-		\caption{Quad tree}
+%    \begin{subfigure}[b]{0.5\textwidth}    
+	    \includegraphics[width =0.66\textwidth]{/results/3/QuadTreeSquare.pdf}
+%		\centering    
+		\caption{Visualisation of the quad tree}
 		\label{fig:QuadTreeSquare}
-    \end{subfigure} 
-    \begin{subfigure}[b]{0.75\textwidth}
-	    \includegraphics[width =\textwidth]{/results/3/predefined-refinement-vtk.png}
+%    \end{subfigure} 
+\end{figure}    
+\begin{figure}[h]
+%    \begin{subfigure}[b]{0.75\textwidth}
+	    \includegraphics[width =0.9\textwidth]{/results/3/predefined-refinement-vtk.png}
 	    %\vspace{3em}
 		\centering
-        \caption{Predefined refinement}
+        \caption{Meshing for a predefined refinement using the shown quad tree}
         \label{fig:PredefRefine}
-    \end{subfigure} 
-    \caption{Predefined}
-    \label{fig:Predef}
+%    \end{subfigure} 
+%    \caption{(a) Visualisation of the quad tree and (b) Meshing for a predefined refinement using the shown quad tree}
+ %   \label{fig:Predef}
 \end{figure}
 
 % 3figure predefined refinement from VTK
@@ -223,9 +225,9 @@ As explained earlier, the objective here is to come up with a valid test case fo
 		
 \begin{figure}[h]
 	\centering
-	    \includegraphics[width =0.75\textwidth]{/results/3/predefined-error-vtk.png}
+	    \includegraphics[width =0.9\textwidth]{/results/3/predefined-error-vtk.png}
 		\centering    
-	 \caption{Predefined error}
+	 \caption{Predefined error function user for function evaluation}
        \label{fig:PredefError}
 \end{figure}
 
@@ -251,7 +253,7 @@ After verification of the code in both adaptive and non-adaptive cases, the next
 	 \caption{case 2 after refinement}
        \label{fig:AdaptiveCase2After}
     \end{subfigure} 
-    \caption{Case 2 before and after refinement}
+    \caption{Comparison of the error values for case 2 (a) before and (b) after refinement}
     \label{fig:AdaptiveCase2}
 \end{figure}
 
@@ -271,7 +273,7 @@ After verification of the code in both adaptive and non-adaptive cases, the next
 	 \caption{case 3 after refinement}
        \label{fig:AdaptiveCase3After}
     \end{subfigure} 
-    \caption{Case 3 before and after refinement}
+    \caption{Comparison of the error values for case 3 (a) before and (b) after refinement}
     \label{fig:AdaptiveCase3}
 \end{figure}
 
@@ -291,7 +293,7 @@ After verification of the code in both adaptive and non-adaptive cases, the next
 	 \caption{case 4 after refinement}
        \label{fig:AdaptiveCase4After}
     \end{subfigure} 
-    \caption{Case 4 before and after refinement}
+    \caption{Comparison of the error values for case 4 (a) before and (b) after refinement}
     \label{fig:AdaptiveCase4}
 \end{figure}
 
@@ -304,7 +306,7 @@ In the last section the error is visualized in unit square simply because it doe
 \item Threshold independent, refinement level changing.
 \item Threshold changing, refinement level constant.
 \end{enumerate}
-The reason for these two scheme is that the results should be separated and based on the factors at play. Figures \ref{fig:ErrorRefinementLevel} and \ref{fig:ErrorThreshod} show the resulting error graphs for cases 2 to 4.
+The reason for these two scheme is that the results should be separated and based on the factors at play. Figures \ref{fig:ErrorRefinementLevel} and \ref{fig:ErrorThreshod} show the resulting error graphs for cases 2 to 4. The difference between the two cases is that one makes the height of the tree to be higher in some local part and the other one ensures that in each level we reach an expected local error. 
 
 %5figure error threshold independent
 %5figure refinement level constant
@@ -313,7 +315,7 @@ The reason for these two scheme is that the results should be separated and base
 	\centering
 	    \includegraphics[width =\textwidth]{/results/5/Error-RefinementLevel.png}
 		\centering    
-	 \caption{Error-RefinementLevel}
+	 \caption{Logarithmic visualization of the error values for the threshold independent, refinement level changing approach for cases 2 to 4}
        \label{fig:ErrorRefinementLevel}
 \end{figure}
 
@@ -321,7 +323,7 @@ The reason for these two scheme is that the results should be separated and base
 	\centering
 	    \includegraphics[width =\textwidth]{/results/5/Error-Threshod.png}
 		\centering    
-	 \caption{Error-Threshold}
+	 \caption{Logarithmic visualization of the error values for the threshold changing, refinement level constant approach for cases 2 to 4}
        \label{fig:ErrorThreshod}
 \end{figure}
 

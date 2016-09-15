@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 SEP 2016 10:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 SEP 2016 12:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -606,6 +606,15 @@ File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
@@ -726,7 +735,7 @@ LaTeX Info: Redefining \nameref on input line 46.
 
 \c@lstlisting=\count142
  (./components/cover.tex
-<styles/tum_logo.png, id=170, 53.9616pt x 28.4262pt>
+<styles/tum_logo.png, id=166, 53.9616pt x 28.4262pt>
 File: styles/tum_logo.png Graphic file (type png)
  <use styles/tum_logo.png>
 Package pdftex.def Info: styles/tum_logo.png used on input line 27.
@@ -748,7 +757,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 45.
-<styles/cse_logo.jpg, id=172, 111.5367pt x 39.7485pt>
+<styles/cse_logo.jpg, id=168, 111.5367pt x 39.7485pt>
 File: styles/cse_logo.jpg Graphic file (type jpg)
 
 <use styles/cse_logo.jpg>
@@ -1076,36 +1085,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--78
 Chapter 3.
 [15
 
-] [16] <figures//NodalBasisLevel3.png, id=574, 310.15875pt x 263.48438pt>
+] [16] <figures//NodalBasisLevel3.png, id=573, 310.15875pt x 263.48438pt>
 File: figures//NodalBasisLevel3.png Graphic file (type png)
 
 <use figures//NodalBasisLevel3.png>
 Package pdftex.def Info: figures//NodalBasisLevel3.png used on input line 111.
 (pdftex.def)             Requested size: 212.3475pt x 180.39322pt.
 
-<figures//HierBasisLevel3.png, id=575, 264.23718pt x 284.56313pt>
+<figures//HierBasisLevel3.png, id=574, 264.23718pt x 284.56313pt>
 File: figures//HierBasisLevel3.png Graphic file (type png)
 
 <use figures//HierBasisLevel3.png>
 Package pdftex.def Info: figures//HierBasisLevel3.png used on input line 117.
 (pdftex.def)             Requested size: 212.3475pt x 228.67987pt.
  [17 <./figures//NodalBasisLevel3.png> <./figures//HierBasisLevel3.png>]
-<figures//SparseGrid4.png, id=589, 488.82625pt x 476.78125pt>
+<figures//SparseGrid4.png, id=588, 488.82625pt x 476.78125pt>
 File: figures//SparseGrid4.png Graphic file (type png)
 
 <use figures//SparseGrid4.png>
 Package pdftex.def Info: figures//SparseGrid4.png used on input line 162.
 (pdftex.def)             Requested size: 260.01709pt x 253.60951pt.
  [18] [19 <./figures//SparseGrid4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 214--216
+Underfull \hbox (badness 10000) in paragraph at lines 213--215
 
  []
 
-<figures//SparseGrid.pdf, id=615, 325.96782pt x 325.96782pt>
+<figures//SparseGrid.pdf, id=614, 325.96782pt x 325.96782pt>
 File: figures//SparseGrid.pdf Graphic file (type pdf)
 
 <use figures//SparseGrid.pdf>
-Package pdftex.def Info: figures//SparseGrid.pdf used on input line 219.
+Package pdftex.def Info: figures//SparseGrid.pdf used on input line 218.
 (pdftex.def)             Requested size: 260.01709pt x 260.03847pt.
 ) [20 <./figures//SparseGrid.pdf>] [21] [22
 
@@ -1126,19 +1135,19 @@ Package pdftex.def Info: figures//GeneralTree.pdf used on input line 29.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[25
 
+]
 Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-[25
 
-]
 Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
  []
 
-<figures//LinkedStrucGenTree1.pdf, id=658, 234.8775pt x 131.74219pt>
+<figures//LinkedStrucGenTree1.pdf, id=659, 234.8775pt x 131.74219pt>
 File: figures//LinkedStrucGenTree1.pdf Graphic file (type pdf)
 
 <use figures//LinkedStrucGenTree1.pdf>
@@ -1146,7 +1155,7 @@ Package pdftex.def Info: figures//LinkedStrucGenTree1.pdf used on input line 50
 .
 (pdftex.def)             Requested size: 143.00873pt x 80.21385pt.
 
-<figures//LinkedStrucGenTree2.pdf, id=659, 635.37375pt x 532.23843pt>
+<figures//LinkedStrucGenTree2.pdf, id=660, 635.37375pt x 532.23843pt>
 File: figures//LinkedStrucGenTree2.pdf Graphic file (type pdf)
 
 <use figures//LinkedStrucGenTree2.pdf>
@@ -1170,7 +1179,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
-<figures//TransversalOrderedTree.pdf, id=671, 624.08156pt x 274.77657pt>
+<figures//TransversalOrderedTree.pdf, id=672, 624.08156pt x 274.77657pt>
 File: figures//TransversalOrderedTree.pdf Graphic file (type pdf)
 
 <use figures//TransversalOrderedTree.pdf>
@@ -1181,22 +1190,22 @@ Package pdftex.def Info: figures//TransversalOrderedTree.pdf used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
-
- []
-
 [27 <./figures//LinkedStrucGenTree1.pdf> <./figures//LinkedStrucGenTree2.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures//LinkedStrucGenTre
 e2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 
 >]
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
-<figures//NodeQuadTree.pdf, id=692, 314.67563pt x 184.43906pt>
+<figures//NodeQuadTree.pdf, id=693, 314.67563pt x 184.43906pt>
 File: figures//NodeQuadTree.pdf Graphic file (type pdf)
 
 <use figures//NodeQuadTree.pdf>
@@ -1212,7 +1221,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--129
  []
 
 [28 <./figures//TransversalOrderedTree.pdf>]
-<figures//results/3/QuadTreeRoot.pdf, id=709, 651.18282pt x 457.71pt>
+<figures//results/3/QuadTreeRoot.pdf, id=710, 651.18282pt x 457.71pt>
 File: figures//results/3/QuadTreeRoot.pdf Graphic file (type pdf)
 
 <use figures//results/3/QuadTreeRoot.pdf>
@@ -1220,7 +1229,15 @@ Package pdftex.def Info: figures//results/3/QuadTreeRoot.pdf used on input line
  132.
 (pdftex.def)             Requested size: 286.01747pt x 201.04382pt.
 
-<figures//results/3/predefined-refinement-vtk.png, id=711, 1428.33624pt x 941.5
+Underfull \vbox (badness 1019) has occurred while \output is active []
+
+ [29 <./figures//NodeQuadTree.pdf> <./figures//results/3/QuadTreeRoot.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures//results/3/QuadTre
+eRoot.pdf): PDF inclusion: multiple pdfs with page group included in a single p
+age
+>]
+<figures//results/3/predefined-refinement-vtk.png, id=732, 1428.33624pt x 941.5
 175pt>
 File: figures//results/3/predefined-refinement-vtk.png Graphic file (type png)
  <use figures//results/3/predefined-refinement-vtk.png>
@@ -1228,13 +1245,8 @@ Package pdftex.def Info: figures//results/3/predefined-refinement-vtk.png used
 on input line 143.
 (pdftex.def)             Requested size: 433.35742pt x 285.64676pt.
 )
-(./chapters/Results.tex [29 <./figures//NodeQuadTree.pdf> <./figures//results/3
-/QuadTreeRoot.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures//results/3/QuadTre
-eRoot.pdf): PDF inclusion: multiple pdfs with page group included in a single p
-age
->] [30 <./figures//results/3/predefined-refinement-vtk.png (PNG copy)>]
+(./chapters/Results.tex [30 <./figures//results/3/predefined-refinement-vtk.png
+ (PNG copy)>]
 Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -1263,14 +1275,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-<figures//results/1/square.png, id=743, 1428.33624pt x 941.5175pt>
+<figures//results/1/square.png, id=744, 1428.33624pt x 941.5175pt>
 File: figures//results/1/square.png Graphic file (type png)
 
 <use figures//results/1/square.png>
 Package pdftex.def Info: figures//results/1/square.png used on input line 21.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/1/rectangle.png, id=744, 1428.33624pt x 941.5175pt>
+<figures//results/1/rectangle.png, id=745, 1428.33624pt x 941.5175pt>
 File: figures//results/1/rectangle.png Graphic file (type png)
 
 <use figures//results/1/rectangle.png>
@@ -1284,7 +1296,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
  []
 
 
-<figures//results/2/case1-verification-combination.png, id=755, 1428.33624pt x 
+<figures//results/2/case1-verification-combination.png, id=756, 1428.33624pt x 
 941.5175pt>
 File: figures//results/2/case1-verification-combination.png Graphic file (type 
 png)
@@ -1293,7 +1305,7 @@ Package pdftex.def Info: figures//results/2/case1-verification-combination.png
 used on input line 52.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case1-verification-fullgrid.png, id=756, 1428.33624pt x 941
+<figures//results/2/case1-verification-fullgrid.png, id=757, 1428.33624pt x 941
 .5175pt>
 File: figures//results/2/case1-verification-fullgrid.png Graphic file (type png
 )
@@ -1302,7 +1314,7 @@ Package pdftex.def Info: figures//results/2/case1-verification-fullgrid.png use
 d on input line 59.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case2-verification-combination.png, id=757, 1428.33624pt x 
+<figures//results/2/case2-verification-combination.png, id=758, 1428.33624pt x 
 941.5175pt>
 File: figures//results/2/case2-verification-combination.png Graphic file (type 
 png)
@@ -1311,7 +1323,7 @@ Package pdftex.def Info: figures//results/2/case2-verification-combination.png
 used on input line 71.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case2-verification-fullgrid.png, id=758, 1428.33624pt x 941
+<figures//results/2/case2-verification-fullgrid.png, id=759, 1428.33624pt x 941
 .5175pt>
 File: figures//results/2/case2-verification-fullgrid.png Graphic file (type png
 )
@@ -1320,7 +1332,7 @@ Package pdftex.def Info: figures//results/2/case2-verification-fullgrid.png use
 d on input line 78.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case3-verification-combination.png, id=759, 1428.33624pt x 
+<figures//results/2/case3-verification-combination.png, id=760, 1428.33624pt x 
 941.5175pt>
 File: figures//results/2/case3-verification-combination.png Graphic file (type 
 png)
@@ -1329,7 +1341,7 @@ Package pdftex.def Info: figures//results/2/case3-verification-combination.png
 used on input line 90.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case3-verification-fullgrid.png, id=760, 1428.33624pt x 941
+<figures//results/2/case3-verification-fullgrid.png, id=761, 1428.33624pt x 941
 .5175pt>
 File: figures//results/2/case3-verification-fullgrid.png Graphic file (type png
 )
@@ -1338,7 +1350,7 @@ Package pdftex.def Info: figures//results/2/case3-verification-fullgrid.png use
 d on input line 97.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case4-verification-combination.png, id=761, 1428.33624pt x 
+<figures//results/2/case4-verification-combination.png, id=762, 1428.33624pt x 
 941.5175pt>
 File: figures//results/2/case4-verification-combination.png Graphic file (type 
 png)
@@ -1347,7 +1359,7 @@ Package pdftex.def Info: figures//results/2/case4-verification-combination.png
 used on input line 109.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case4-verification-fullgrid.png, id=762, 1428.33624pt x 941
+<figures//results/2/case4-verification-fullgrid.png, id=763, 1428.33624pt x 941
 .5175pt>
 File: figures//results/2/case4-verification-fullgrid.png Graphic file (type png
 )
@@ -1366,7 +1378,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<figures//results/2/case1-verification-difference.png, id=763, 1428.33624pt x 9
+<figures//results/2/case1-verification-difference.png, id=764, 1428.33624pt x 9
 41.5175pt>
 File: figures//results/2/case1-verification-difference.png Graphic file (type p
 ng)
@@ -1375,7 +1387,7 @@ Package pdftex.def Info: figures//results/2/case1-verification-difference.png u
 sed on input line 129.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case2-verification-difference.png, id=764, 1428.33624pt x 9
+<figures//results/2/case2-verification-difference.png, id=765, 1428.33624pt x 9
 41.5175pt>
 File: figures//results/2/case2-verification-difference.png Graphic file (type p
 ng)
@@ -1384,7 +1396,7 @@ Package pdftex.def Info: figures//results/2/case2-verification-difference.png u
 sed on input line 136.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case3-verification-difference.png, id=765, 1428.33624pt x 9
+<figures//results/2/case3-verification-difference.png, id=766, 1428.33624pt x 9
 41.5175pt>
 File: figures//results/2/case3-verification-difference.png Graphic file (type p
 ng)
@@ -1393,7 +1405,7 @@ Package pdftex.def Info: figures//results/2/case3-verification-difference.png u
 sed on input line 142.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/2/case4-verification-difference.png, id=766, 1428.33624pt x 9
+<figures//results/2/case4-verification-difference.png, id=767, 1428.33624pt x 9
 41.5175pt>
 File: figures//results/2/case4-verification-difference.png Graphic file (type p
 ng)
@@ -1438,7 +1450,7 @@ Package pdftex.def Info: figures//results/3/QuadTreeRoot.pdf used on input line
  192.
 (pdftex.def)             Requested size: 286.01747pt x 201.04382pt.
 
-<figures//results/3/QuadTreeSquare.pdf, id=790, 526.96875pt x 378.66469pt>
+<figures//results/3/QuadTreeSquare.pdf, id=792, 526.96875pt x 378.66469pt>
 File: figures//results/3/QuadTreeSquare.pdf Graphic file (type pdf)
 
 <use figures//results/3/QuadTreeSquare.pdf>
@@ -1449,172 +1461,233 @@ File: figures//results/3/predefined-refinement-vtk.png Graphic file (type png)
 
 <use figures//results/3/predefined-refinement-vtk.png>
 Package pdftex.def Info: figures//results/3/predefined-refinement-vtk.png used 
-on input line 210.
-(pdftex.def)             Requested size: 325.01807pt x 214.23148pt.
+on input line 212.
+(pdftex.def)             Requested size: 390.01903pt x 257.0864pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<figures//results/3/predefined-error-vtk.png, id=791, 1428.33624pt x 941.5175pt
+<figures//results/3/predefined-error-vtk.png, id=793, 1428.33624pt x 941.5175pt
 >
 File: figures//results/3/predefined-error-vtk.png Graphic file (type png)
  <use figures//results/3/predefined-error-vtk.png>
 Package pdftex.def Info: figures//results/3/predefined-error-vtk.png used on in
-put line 226.
-(pdftex.def)             Requested size: 325.01807pt x 214.23148pt.
+put line 228.
+(pdftex.def)             Requested size: 390.01903pt x 257.0864pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
 
-<figures//results/4/case2-adaptive-before-refinement.png, id=796, 1428.33624pt 
+Underfull \vbox (badness 6348) has occurred while \output is active []
+
+ [36 <./figures//results/3/QuadTreeSquare.pdf>]
+<figures//results/4/case2-adaptive-before-refinement.png, id=810, 1428.33624pt 
 x 941.5175pt>
 File: figures//results/4/case2-adaptive-before-refinement.png Graphic file (typ
 e png)
  <use figures//results/4/case2-adaptive-before-refinement.png>
 Package pdftex.def Info: figures//results/4/case2-adaptive-before-refinement.pn
-g used on input line 242.
+g used on input line 244.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/4/case2-adaptive-after-refinement.png, id=797, 1428.33624pt x
+<figures//results/4/case2-adaptive-after-refinement.png, id=811, 1428.33624pt x
  941.5175pt>
 File: figures//results/4/case2-adaptive-after-refinement.png Graphic file (type
  png)
  <use figures//results/4/case2-adaptive-after-refinement.png>
 Package pdftex.def Info: figures//results/4/case2-adaptive-after-refinement.png
- used on input line 249.
+ used on input line 251.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<figures//results/4/case3-adaptive-before-refinement.png, id=798, 1428.33624pt 
+<figures//results/4/case3-adaptive-before-refinement.png, id=812, 1428.33624pt 
 x 941.5175pt>
 File: figures//results/4/case3-adaptive-before-refinement.png Graphic file (typ
 e png)
  <use figures//results/4/case3-adaptive-before-refinement.png>
 Package pdftex.def Info: figures//results/4/case3-adaptive-before-refinement.pn
-g used on input line 262.
+g used on input line 264.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/4/case3-adaptive-after-refinement.png, id=799, 1428.33624pt x
+<figures//results/4/case3-adaptive-after-refinement.png, id=813, 1428.33624pt x
  941.5175pt>
 File: figures//results/4/case3-adaptive-after-refinement.png Graphic file (type
  png)
  <use figures//results/4/case3-adaptive-after-refinement.png>
 Package pdftex.def Info: figures//results/4/case3-adaptive-after-refinement.png
- used on input line 269.
+ used on input line 271.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<figures//results/4/case4-adaptive-before-refinement.png, id=800, 1428.33624pt 
+<figures//results/4/case4-adaptive-before-refinement.png, id=814, 1428.33624pt 
 x 941.5175pt>
 File: figures//results/4/case4-adaptive-before-refinement.png Graphic file (typ
 e png)
  <use figures//results/4/case4-adaptive-before-refinement.png>
 Package pdftex.def Info: figures//results/4/case4-adaptive-before-refinement.pn
-g used on input line 282.
+g used on input line 284.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
-<figures//results/4/case4-adaptive-after-refinement.png, id=801, 1428.33624pt x
+<figures//results/4/case4-adaptive-after-refinement.png, id=815, 1428.33624pt x
  941.5175pt>
 File: figures//results/4/case4-adaptive-after-refinement.png Graphic file (type
  png)
  <use figures//results/4/case4-adaptive-after-refinement.png>
 Package pdftex.def Info: figures//results/4/case4-adaptive-after-refinement.png
- used on input line 289.
+ used on input line 291.
 (pdftex.def)             Requested size: 212.3475pt x 139.97165pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [36]
-<figures//results/5/Error-RefinementLevel.png, id=809, 1254.6072pt x 684.6378pt
+[37]
+<figures//results/5/Error-RefinementLevel.png, id=822, 1254.6072pt x 684.6378pt
 >
 File: figures//results/5/Error-RefinementLevel.png Graphic file (type png)
  <use figures//results/5/Error-RefinementLevel.png>
 Package pdftex.def Info: figures//results/5/Error-RefinementLevel.png used on i
-nput line 314.
+nput line 316.
 (pdftex.def)             Requested size: 433.35742pt x 236.48235pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures//results/5/Error-Threshod.png, id=810, 1257.498pt x 722.7pt>
+<figures//results/5/Error-Threshod.png, id=823, 1257.498pt x 722.7pt>
 File: figures//results/5/Error-Threshod.png Graphic file (type png)
 
 <use figures//results/5/Error-Threshod.png>
 Package pdftex.def Info: figures//results/5/Error-Threshod.png used on input li
-ne 322.
+ne 324.
 (pdftex.def)             Requested size: 433.35742pt x 249.05608pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./chapters/Conclusion.tex [37] [38 <./figures//results/3/QuadTreeSquare.pdf>
-] [39 <./figures//results/3/predefined-error-vtk.png (PNG copy)> <./figures//re
-sults/4/case2-adaptive-before-refinement.png (PNG copy)> <./figures//results/4/
-case2-adaptive-after-refinement.png (PNG copy)>] [40 <./figures//results/4/case
-3-adaptive-before-refinement.png (PNG copy)> <./figures//results/4/case3-adapti
-ve-after-refinement.png (PNG copy)> <./figures//results/4/case4-adaptive-before
--refinement.png (PNG copy)> <./figures//results/4/case4-adaptive-after-refineme
-nt.png (PNG copy)>] [41 <./figures//results/5/Error-RefinementLevel.png> <./fig
-ures//results/5/Error-Threshod.png>] [42
-
-]
+) (./chapters/Conclusion.tex [38 <./figures//results/3/predefined-error-vtk.png
+ (PNG copy)>] [39 <./figures//results/4/case2-adaptive-before-refinement.png (P
+NG copy)> <./figures//results/4/case2-adaptive-after-refinement.png (PNG copy)>
+ <./figures//results/4/case3-adaptive-before-refinement.png (PNG copy)> <./figu
+res//results/4/case3-adaptive-after-refinement.png (PNG copy)> <./figures//resu
+lts/4/case4-adaptive-before-refinement.png (PNG copy)> <./figures//results/4/ca
+se4-adaptive-after-refinement.png (PNG copy)>] [40 <./figures//results/5/Error-
+RefinementLevel.png> <./figures//results/5/Error-Threshod.png>]
 Chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
+[41
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
+]) [42] [43
 
- []
-
-[43]
-Overfull \hbox (24.38025pt too wide) in paragraph at lines 47--48
-[]\OT1/ppl/m/n/10.95 -- case 2 shows much higher er-ror in the threshold-indepe
-ndent ap-proach than the refinement-
- []
-
-) [44] [45
-
-] [46] (./chapters/oneAppendix.tex
+] [44] (./chapters/oneAppendix.tex
 Appendix A.
-(./main.lof)
-\tf@lof=\write7
-\openout7 = `main.lof'.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 7.
+LaTeX Font Info:    Try loading font information for OML+ppl on input line 12.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omlppl.fd
+File: omlppl.fd 
+)
+LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 12.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 14.
 
- [47
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
 
-]) [48] (./main.bbl [49
+Underfull \vbox (badness 2376) has occurred while \output is active []
 
+ [45
 
-] [50] [51])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 125.
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+[50]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [52]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53]
+LaTeX Font Info:    Font shape `OMS/ppl/m/it' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 250.
+LaTeX Font Info:    Font shape `OML/ppl/m/it' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 253.
+
+[54] [55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63])
+[64] (./main.bbl [65
+
+
+] [66] [67])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 125.
+ [68]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 125.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 125.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 125.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E5F7D94CA67E319EE2345A99C4CF275F;2916.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 5F3DA8E6CC0EF0E95E9995A05D94C96F;2840
+(rerunfilecheck)             After:  BD98C28F92045400FA9A59EDA56A0A5D;2772.
 
 LaTeX Warning: There were undefined references.
 
@@ -1624,35 +1697,38 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 125.
  ) 
 Here is how much of TeX's memory you used:
- 13115 strings out of 493089
- 206833 string characters out of 6134842
- 352455 words of memory out of 5000000
- 16008 multiletter control sequences out of 15000+600000
- 30925 words of font info for 81 fonts, out of 8000000 for 9000
+ 14374 strings out of 493089
+ 224425 string characters out of 6134842
+ 496509 words of memory out of 5000000
+ 16720 multiletter control sequences out of 15000+600000
+ 31518 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,15n,56p,1200b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
-pe1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw
-/palatino/uplri8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/yh
-math/yhcmex.pfb>
-Output written on main.pdf (68 pages, 1709330 bytes).
+ 43i,15n,58p,1200b,1935s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{section.3.5} has been referenced but does not exi
+st, replaced by a fixed one
+
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2015/texmf-dist/fon
+ts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/p
+alatino/uplri8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/yhma
+th/yhcmex.pfb>
+Output written on main.pdf (84 pages, 1791462 bytes).
 PDF statistics:
- 1012 PDF objects out of 1200 (max. 8388607)
- 864 compressed objects within 9 object streams
- 244 named destinations out of 1000 (max. 500000)
- 522 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1709 PDF objects out of 1728 (max. 8388607)
+ 1539 compressed objects within 16 object streams
+ 777 named destinations out of 1000 (max. 500000)
+ 514 words of extra memory for PDF output out of 10000 (max. 10000000)
 

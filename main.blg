@@ -6,48 +6,49 @@ Database file #1: bibliography/literature.bib
 Warning--there's a number but no series in Rude1994
 Warning--empty publisher in Lastdrager2000
 Warning--there's a number but no series in Hegland2002
-Warning--empty institution in Garcke2006a
 Warning--empty publisher in Garcke2007a
+Warning--there's a number but no volume in Ebeida2010
 Warning--empty publisher in Heene2014
-You've used 39 entries,
+Warning--can't use both volume and number fields in delvos1989boolean
+You've used 43 entries,
             2146 wiz_defined-function locations,
-            783 strings with 11299 characters,
-and the built_in function-call counts, 15706 in all, are:
-= -- 1627
-> -- 671
-< -- 20
-+ -- 256
-- -- 217
-* -- 1086
-:= -- 2610
-add.period$ -- 129
-call.type$ -- 39
-change.case$ -- 202
+            813 strings with 11872 characters,
+and the built_in function-call counts, 17124 in all, are:
+= -- 1766
+> -- 737
+< -- 21
++ -- 282
+- -- 239
+* -- 1203
+:= -- 2856
+add.period$ -- 141
+call.type$ -- 43
+change.case$ -- 222
 chr.to.int$ -- 0
-cite$ -- 45
-duplicate$ -- 604
-empty$ -- 1201
-format.name$ -- 217
-if$ -- 3304
+cite$ -- 50
+duplicate$ -- 652
+empty$ -- 1309
+format.name$ -- 239
+if$ -- 3584
 int.to.chr$ -- 0
-int.to.str$ -- 39
-missing$ -- 38
-newline$ -- 198
-num.names$ -- 125
-pop$ -- 230
+int.to.str$ -- 43
+missing$ -- 44
+newline$ -- 218
+num.names$ -- 137
+pop$ -- 252
 preamble$ -- 1
-purify$ -- 162
+purify$ -- 180
 quote$ -- 0
-skip$ -- 478
+skip$ -- 510
 stack$ -- 0
-substring$ -- 1156
-swap$ -- 173
-text.length$ -- 20
+substring$ -- 1254
+swap$ -- 180
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 156
-warning$ -- 6
-while$ -- 206
-width$ -- 41
-write$ -- 449
-(There were 6 warnings)
+type$ -- 170
+warning$ -- 7
+while$ -- 225
+width$ -- 45
+write$ -- 493
+(There were 7 warnings)

@@ -6,6 +6,12 @@ S~Smolyak.
   Classes of Functions}.
 \newblock {\em Soviet Mathematics, Doklady}, 4:240--243, 1963.
 
+\bibitem{Gordon1971}
+William~J. Gordon.
+\newblock {Blending-Function Methods of Bivariate and Multivariate
+  Interpolation and Approximation}.
+\newblock {\em SIAM Journal on Numerical Analysis}, 8(1):158--177, mar 1971.
+
 \bibitem{Yserentant1986}
 Harry Yserentant.
 \newblock {On the multi-level splitting of finite element spaces}.
@@ -56,10 +62,15 @@ Christoph Pflaum.
 \newblock {\em Institut fur Informatik: Technische Universitat Munchen}, pages
   1--35, 1993.
 
+\bibitem{Temlyakov1993}
+V.N. Temlyakov.
+\newblock {On Approximate Recovery of Functions with Bounded Mixed Derivative}.
+\newblock {\em Journal of Complexity}, 9(1):41--59, mar 1993.
+
 \bibitem{Bungartz1994}
 H.-J. Bungartz, M.~Griebel, D.~R{\"{o}}schke, and C.~Zenger.
-\newblock {POINTWISE CONVERGENCE OF THE COMBINATION TECHNIQUE FOR LAPLACE ' S
-  EQUATION}.
+\newblock {Pointwise convergence of the combination technique for Laplace's
+  equation}.
 \newblock {\em East-West J. Numer. Math}, 2:21--45, 1994.
 
 \bibitem{Rude1994}
@@ -74,6 +85,11 @@ Michael Griebel and Veronika Thurner.
   technique}.
 \newblock {\em International Journal of Numerical Methods for Heat {\&} Fluid
   Flow}, 5(3):251--269, mar 1995.
+
+\bibitem{Henshaw1996}
+William~D. Henshaw.
+\newblock {Automatic grid generation}.
+\newblock {\em Acta Numerica}, 5:121, jan 1996.
 
 \bibitem{Pflaum1997}
 Christoph Pflaum.
@@ -146,11 +162,6 @@ Jochen Garcke.
   learning - ICML '06}, pages 321--328, New York, New York, USA, 2006. ACM
   Press.
 
-\bibitem{Garcke2006a}
-Jochen Garcke.
-\newblock {Sparse Grid Tutorial Jochen}.
-\newblock Technical report, Canberra, 2006.
-
 \bibitem{Garcke2007a}
 Jochen Garcke.
 \newblock {A dimension adaptive sparse grid combination technique for machine
@@ -189,6 +200,12 @@ Jochen Garcke and Markus Hegland.
 \newblock {Fitting multidimensional data using gradient penalties and the
   sparse grid combination technique}.
 \newblock {\em Computing}, 84(1-2):1--25, apr 2009.
+
+\bibitem{Ebeida2010}
+Mohamed~S Ebeida, Roger~L Davis, and Roland~W Freund.
+\newblock {A new fast hybrid adaptive grid generation technique for arbitrary
+  two-dimensional domains}.
+\newblock {\em Library}, (April):305--329, 2010.
 
 \bibitem{Garcke2013}
 Jochen Garcke.
@@ -243,5 +260,11 @@ Bastian Bohn, Jochen Garcke, and Michael Griebel.
 \newblock {A sparse grid based method for generative dimensionality reduction
   of high-dimensional data}.
 \newblock {\em Journal of Computational Physics}, 309:1--17, 2016.
+
+\bibitem{delvos1989boolean}
+Martin Buhmann, F.-J. Delvos, and Walter Schempp.
+\newblock {\em {Boolean Methods in Interpolation and Approximation}},
+  volume~74.
+\newblock Longman Scientific and Technical, oct 1990.
 
 \end{thebibliography}

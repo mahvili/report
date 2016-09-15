@@ -13,17 +13,17 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces The linked structure for a general tree: (a) the node structure; (b) the portion of the data structure associated with a node and its children.\relax }}{28}{figure.caption.14}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces (a) Combination and (b) verification for case 1\relax }}{29}{figure.caption.15}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces (a) Combination and (b) verification for case 2\relax }}{30}{figure.caption.16}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces (a) Combination and (b) verification for case 2\relax }}{29}{figure.caption.16}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces (a) Combination and (b) verification for case 3\relax }}{30}{figure.caption.17}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces (a) Combination and (b) verification for case 4\relax }}{31}{figure.caption.18}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces (a) Combination and (b) verification for case 4\relax }}{30}{figure.caption.18}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Difference case 1-4\relax }}{31}{figure.caption.19}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Quad tree representation\relax }}{32}{figure.caption.20}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Predefined\relax }}{34}{figure.caption.21}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Predefined error\relax }}{35}{figure.caption.22}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Case 2 before and after refinement\relax }}{35}{figure.caption.23}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Case 3 before and after refinement\relax }}{36}{figure.caption.24}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Case 4 before and after refinement\relax }}{36}{figure.caption.25}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Error-RefinementLevel\relax }}{37}{figure.caption.26}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Error-Threshod\relax }}{37}{figure.caption.27}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Predefined\relax }}{33}{figure.caption.21}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Predefined error\relax }}{34}{figure.caption.22}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Case 2 before and after refinement\relax }}{34}{figure.caption.23}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Case 3 before and after refinement\relax }}{34}{figure.caption.24}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Case 4 before and after refinement\relax }}{35}{figure.caption.25}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Error-RefinementLevel\relax }}{35}{figure.caption.26}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Error-Threshod\relax }}{36}{figure.caption.27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

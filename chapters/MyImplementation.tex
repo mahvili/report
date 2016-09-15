@@ -20,27 +20,63 @@
  \section{General Ideas}
  
  		
-		Productivity experts claim that breakthroughs come by thinking "nonlinearly". Tree structures have been an enormous leap in data organization since they allow the implementation of algorithms more rapidly than linear data structures such as lists, vectors and sequences.\\
-		In categorizing trees as "nonlinear" with respect to organizational relationship, the main feature that must be highlighted is more sophisticated relationships than elementary "before" and "after" relationships between objects in sequences. A tree follows a \textbf{hierarchical} architecture, with some objects being "above" and some "below" others.\\
-		A \textbf{tree} is an abstract data type. In a tree, each element has a \textbf{parent} element. It can have zero or more \textbf{children} elements.\\
-		\textbf{Formal Tree Definition}\\
-		A \textbf{tree T} can be defined as a set of \textbf{nodes} storing elements in a \textbf{parent-child} relationship and has the properties as defined below:\\
-		- A nonempty \textbf{T} has a special node known as the \textbf{root} of \textbf{T} which has no parent.\\
-		- Every other node \textit{$\nu$} of \textbf{T} has a unique parent node \textit{w} and every node with parent \textit{w} is a \textbf{child} of \textit{w}.\\
-		If a parent has two nodes which are its children, then these children are \textbf{siblings}. If a node \textit{$\nu$} does not have children then it is \textbf{external} while it is \textbf{internal} if it has one or more children. External nodes can also be termed as \textbf{leaves}.\\
-		\textbf{Ordered Trees}\\
-		A tree having a linear ordering for the children of each node is termed as \textbf{ordered}. The children of a node  can be identified as first, second and so on. In ordered trees, linear order relationship between siblings is illustrated by listing them in a sequence.\\
+		Productivity experts claim that breakthroughs come by thinking "nonlinearly". Tree structures have been an enormous leap in data organization since they allow the implementation of algorithms more rapidly than linear data structures such as lists, vectors and sequences.
 		
-		For implementation "position" and "node" can be used interchangeably for trees.\\
+		In categorizing trees as "nonlinear" with respect to organizational relationship, the main feature that must be highlighted is more sophisticated relationships than elementary "before" and "after" relationships between objects in sequences. A tree follows a \textbf{hierarchical} architecture, with some objects being "above" and some "below" others.
 		
-		\textbf{A Linked Structure for General}\\
-		A \textbf{linked structure} can be used to comprehend a tree \textbf{T}. Each node of \textbf{T} can be depicted as a position object \textit{p} with the below mentioned fields:\\
-		reference to the node's element, link to node's parent and some kind of collection to store links into node's children. 
+		A \textbf{tree} is an abstract data type. In a tree, each element has a \textbf{parent} element. It can have zero or more \textbf{children} elements.
+		\\
+		\textbf{Formal Tree Definition}
+		
+		A \textbf{tree T} can be defined as a set of \textbf{nodes} storing elements in a \textbf{parent-child} relationship and has the properties as defined below:
+		\begin{itemize}
+			\item A nonempty \textbf{T} has a special node known as the \textbf{root} of \textbf{T} which has no parent. 
+			\item Every other node \textit{$\nu$} of \textbf{T} has a unique parent node \textit{w} and every node with parent \textit{w} is a \textbf{child} of \textit{w}.
+		\end{itemize}
+
+		If a parent has two nodes which are its children, then these children are \textbf{siblings}. If a node \textit{$\nu$} does not have children then it is \textbf{external} while it is \textbf{internal} if it has one or more children. External nodes can also be termed as \textbf{leaves}.
+		
+		Figure \ref{fig:GeneralTree} shows an example of a tree representing computer files organized in the form of nested directories. 
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=\textwidth]{/GeneralTree.pdf}
+			\caption{Tree representing a portion of a file system}
+			\label{fig:GeneralTree}
+		\end{figure}
+		
+		\textbf{Ordered Trees}
+		
+		A tree having a linear ordering for the children of each node is termed as \textbf{ordered}. The children of a node  can be identified as first, second and so on. In ordered trees, linear order relationship between siblings is illustrated by listing them in a sequence.
+		
+		For implementation "position" and "node" can be used interchangeably for trees. \\
+		
+		\textbf{A Linked Structure for General}
+		
+		A \textbf{linked structure} can be used to comprehend a tree \textbf{T}. Each node of \textbf{T} can be depicted as a position object \textit{p} with the below mentioned fields:
+		reference to the node's element, link to node's parent and some kind of collection to store links into node's children.  Figure \ref{fig:LinkedStrucGenTree} shows a representation of  a node of a tree and a schematic representation of the data structure associated with a node and its children. \\
 		
 		% The height of a tree is equal to the maximum depth of its external nodes.
+		\begin{figure}[h]
+			\centering
+		    \begin{subfigure}[b]{0.33\textwidth}
+			    \includegraphics[width =\textwidth]{/LinkedStrucGenTree1.pdf}
+			    %\vspace{3em}
+				\centering
+		        \caption{}
+		    \end{subfigure} 
+		    \begin{subfigure}[b]{0.66\textwidth}    
+			    \includegraphics[width =\textwidth]{/LinkedStrucGenTree2.pdf}
+				\centering    
+			 \caption{}
+		    \end{subfigure} 
+		    \caption{The linked structure for a general tree: (a) the node structure; (b) the portion of the data structure associated with a node and its children.}
+		    \label{fig:LinkedStrucGenTree}
+		\end{figure}
 		
 		
-		\textbf{Preorder Traversal}\\
+		\textbf{Preorder Traversal}
+		
 		A traversal of a tree \textbf{T} is a method of acquiring all the nodes of \textbf{T}. Preorder traversal which is a basic traversal scheme for trees has been represented here.\\
 		In a preorder traversal of \textbf{T}, the root of \textbf{T} is called initially and further the subtrees rooted at its children are traversed repeatedly. In an ordered tree, the subtrees are traversed according to the order of the children. The definitive action associated with the "visit" of a node depends on the application of this traversal.\\
 		
@@ -53,7 +89,17 @@
 		
 		The preorder traversal is an effective way to access all the nodes of a tree.\\
 		
+		Figure \ref{fig:TransversalOrderedTree} shows an example of the preorder traversal of the tree associated with a research paper. The document is sequentially read from beginning to the end.
+		
+				\begin{figure}[h]
+				\centering
+					\includegraphics[width=\textwidth]{/TransversalOrderedTree.pdf}
+					\caption{Preorder traversal of an ordered tree, where the children of each node are ordered from left to right.}
+					\label{fig:TransversalOrderedTree}
+				\end{figure}
+		
 		\textbf{Quad Trees}\\
+		
 		A \textbf{quad tree} is an ordered tree in which each node has at most four children
 		\begin{enumerate}
 			\item Every node has at most four children.
@@ -69,6 +115,14 @@
 			\item consists of a node which is \textbf{root} and four further quad trees which are called as south-west(SW), south-east(SE), north-west(NW) or north-east(NE) subtrees. 
 		\end{itemize}
 		 
+		 Figure \ref{fig:NodeQuadTree} shows a representation of a node in a linked data structure for representing a quad tree.
+		 		
+		 \begin{figure}[h]
+		 	\centering
+		 	\includegraphics[width=0.33\textwidth]{/NodeQuadTree.pdf}
+		 	\caption{A node in a linked data structure for representing a quad tree.}
+		 	\label{fig:NodeQuadTree}
+		 \end{figure}
 
  
  \section{Different Schemes}

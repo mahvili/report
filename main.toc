@@ -2,9 +2,9 @@
 \select@language {english}
 \select@language {english}
 \select@language {english}
-\contentsline {chapter}{Acknowledgments}{vii}{section*.2}
-\contentsline {chapter}{Abstract}{ix}{section*.3}
-\contentsline {chapter}{Outline of the Thesis}{xiii}{section*.5}
+\contentsline {chapter}{Acknowledgments}{vii}{section*.4}
+\contentsline {chapter}{Abstract}{ix}{section*.5}
+\contentsline {chapter}{Outline of the Thesis}{xiii}{section*.7}
 \contentsline {part}{\numberline {I}Part One: Introduction and Theory}{1}{part.1}
 \contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivation}{3}{section.1.1}
@@ -12,36 +12,32 @@
 \contentsline {chapter}{\numberline {2}Related Works}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Works on Complicated Domains}{7}{section.2.1}
 \contentsline {section}{\numberline {2.2}Works on Error Analysis and Convergence}{7}{section.2.2}
-\contentsline {section}{\numberline {2.3}Works on Parallel Environment}{8}{section.2.3}
+\contentsline {section}{\numberline {2.3}Works on Parallel Environment}{9}{section.2.3}
 \contentsline {section}{\numberline {2.4}Works on Fluid Mechanics, Heat Transfer and other PDEs}{10}{section.2.4}
-\contentsline {section}{\numberline {2.5}Works on Numerical Integration}{11}{section.2.5}
-\contentsline {section}{\numberline {2.6}Works on Regression Problem}{11}{section.2.6}
-\contentsline {section}{\numberline {2.7}Works on Data Mining and Machine Learning}{12}{section.2.7}
-\contentsline {section}{\numberline {2.8}Works on Eigenvalue Problems}{12}{section.2.8}
-\contentsline {section}{\numberline {2.9}Works on Adaptive Methods}{12}{section.2.9}
+\contentsline {section}{\numberline {2.5}Works on Numerical Integration}{12}{section.2.5}
+\contentsline {section}{\numberline {2.6}Works on Regression Problem}{12}{section.2.6}
+\contentsline {section}{\numberline {2.7}Works on Data Mining and Machine Learning}{13}{section.2.7}
+\contentsline {section}{\numberline {2.8}Works on Eigenvalue Problems}{13}{section.2.8}
+\contentsline {section}{\numberline {2.9}Works on Adaptive Methods}{14}{section.2.9}
 \contentsline {chapter}{\numberline {3}Methods}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}sparse grid method and hierarchical basis}{15}{section.3.1}
-\contentsline {section}{\numberline {3.2}Combination Technique}{16}{section.3.2}
-\contentsline {section}{\numberline {3.3}Tree and in special Quadtrees}{16}{section.3.3}
-\contentsline {section}{\numberline {3.4}Some General Discussions and Points}{19}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Argument of error and convergence}{19}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Argument of Preconditioner plus solver}{20}{subsection.3.4.2}
-\contentsline {part}{\numberline {II}Part Two: Implementation, Results and Conclusion}{23}{part.2}
-\contentsline {chapter}{\numberline {4}Current Implementation}{25}{chapter.4}
-\contentsline {section}{\numberline {4.1}General Ideas}{26}{section.4.1}
+\contentsline {section}{\numberline {3.1}Sparse grid method and hierarchical basis}{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}Combination Technique}{19}{section.3.2}
+\contentsline {part}{\numberline {II}Part Two: Implementation, Results and Conclusion}{21}{part.2}
+\contentsline {chapter}{\numberline {4}Current Implementation}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}General Ideas}{23}{section.4.1}
 \contentsline {section}{\numberline {4.2}Different Schemes}{26}{section.4.2}
 \contentsline {chapter}{\numberline {5}Results}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}Verification of components}{28}{section.5.1}
-\contentsline {section}{\numberline {5.2}results of local refinement (spatial adaptivity)}{28}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}error indicator based on solution of combination technique}{28}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}error indicator based on predefined error function}{28}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Error and Accuracy}{28}{section.5.3}
-\contentsline {chapter}{\numberline {6}Conclusion}{29}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclusion}{29}{section.6.1}
-\contentsline {section}{\numberline {6.2}Suggestions for future works}{29}{section.6.2}
-\contentsline {part}{Appendix}{33}{part*.8}
-\contentsline {chapter}{\numberline {A}Detailed Descriptions}{33}{appendix.A}
-\contentsline {section}{\numberline {A.1}List of Figures}{33}{section.A.1}
-\contentsline {section}{\numberline {A.2}List of Tables}{35}{section.A.2}
-\contentsline {section}{\numberline {A.3}Source Code}{37}{section.A.3}
-\contentsline {chapter}{\nonumberline Bibliography}{39}{appendix*.11}
+\contentsline {section}{\numberline {5.1}Verification of components}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}Results of local refinement (spatial adaptivity)}{30}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Error indicator based on predefined error function}{32}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Error indicator based on solution of combination technique}{32}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Error and Accuracy}{33}{section.5.3}
+\contentsline {chapter}{\numberline {6}Conclusion}{39}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclusion}{39}{section.6.1}
+\contentsline {section}{\numberline {6.2}Suggestions for future works}{39}{section.6.2}
+\contentsline {part}{Appendix}{43}{part*.28}
+\contentsline {chapter}{\numberline {A}Detailed Descriptions}{43}{appendix.A}
+\contentsline {section}{\numberline {A.1}List of Figures}{43}{section.A.1}
+\contentsline {section}{\numberline {A.2}List of Tables}{45}{section.A.2}
+\contentsline {section}{\numberline {A.3}Source Code}{47}{section.A.3}
+\contentsline {chapter}{\nonumberline Bibliography}{49}{appendix*.31}
